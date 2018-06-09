@@ -1,0 +1,86 @@
+ /*
+  *= require_tree .
+  *= require_self
+  */
+  header{
+    height: 60px;
+    width:100vw;
+    background-image: url(/木綿.jpg);
+    #background-size: cover;
+    position:fixed;
+    top:0;
+    z-index: 10;
+  /*  background: rgba(255, 255, 255, 0.75);*/
+  }
+
+  /* ヘッダー ================================ */
+
+
+  .logo{
+    position: absolute;
+    top:5px;
+    left: 40px;
+    width: 60px;
+    height:50px;
+  }
+
+  .link{
+    position: absolute;
+    top:5px;
+
+    box-shadow: 5px 5px #04121a;
+    padding:0 15px ;
+    float: right;
+    display: block;
+    background-color: #931F1D;
+    border-radius: 4px;
+    color: white;
+    opacity: 0.9;
+    height: 25px;
+  }
+  .home:hover{
+    opacity: 1;
+  }
+  .home:active{
+    box-shadow: none;
+    position: relative;
+    top:5px;
+    left: 10px;
+  }
+
+  .knowhow{
+    background-color: #215e65;
+    position: absolute;
+    top:5px;
+    right: 350px;
+  }
+  .knowhow:active{
+    box-shadow: none;
+    position: relative;
+    top:5px;
+    left: 10px;
+  }
+
+
+
+  /* footer ================================ */
+  footer {
+    background-image: url(/木綿２.jpg);
+  }
+  footer img {
+    width: 100vw;
+    height: 80px;
+    padding-top: 40px;
+    padding-left: 40px;
+  }
+
+  footer p {
+    color: #b3aeb5;
+    font-size: 12px;
+  }
+
+  .footer {
+    height:130px;
+  }
+
+</html>

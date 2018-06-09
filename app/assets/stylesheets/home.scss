@@ -1,0 +1,179 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+/* 全体 ================================ */
+.jumbotron{
+  padding-top: 60px;
+  margin: 0;
+  font-family: Georgia,游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN",HGS明朝E,メイリオ,Meiryo,serif;
+}
+
+
+
+/* container ================================ */
+.container{
+  width: 100vw;
+  height: 350px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+  font-weight:normal;
+  background-position: 10% 0%;
+  background-image:url(/温泉写真.jpg);
+  background-size: cover;
+}
+
+.container h1{
+  opacity: 0.7;
+  letter-spacing: 5px;
+}
+.container p{
+  opacity:0.7;
+  letter-spacing: 3px;
+  margin: 30px 0 10px 40px;
+  }
+
+
+ .btn{
+   text-align: center;
+   width: 220px;
+   box-shadow: 5px 5px #04121a;
+   padding: 5px 15px ;
+   color:white;
+   opacity:0.8;
+   display: inline-block;
+   border-radius: 4px;
+   height: 30px;
+   margin-left: 20px;
+   margin-top: 20px;
+ }
+ .btn:hover{
+   opacity: 1;
+ }
+ .btn:active{
+   box-shadow:none;
+   position:relative;
+   top:5px;
+ }
+ .signup{
+    margin-top: 100px ;
+    background-color:#2F4F4F;
+    font-size: 18px;
+ }
+
+ .facebook{
+    background-color:#3b5998;
+    font-size: 18px;
+ }
+
+ .twitter{
+    background-color:#55acee;
+    margin-left: 10px;
+    font-size: 18px;
+ }
+ .i{
+ margin-right:50px;
+ }
+/* この時期おすすめの宿　帯 ============================== */
+.middle_line{
+  width: 100vw;
+  height: 560px;
+  background-image: url(/藍２.jpg);
+  background-size: cover;
+  text-align: center;
+  a{color: white;
+     font-size: 40px;
+     position: relative;
+     top:  20px;
+  }
+}
+
+
+/* trend ================================ */
+.trend{
+  float:left;
+  width: 25%;
+  height: 500px;
+  text-align: center;
+  background-color: white;
+}
+.trend a{
+  color: black;
+}
+.trend a:hover{
+  color:#b72a1f;
+}
+
+.txt-content{
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 12px;
+  width: 90%;
+  text-align: left;
+}
+
+/* low_container================================ */
+.lowcontainer{
+  height: 700px;
+  width: 100vw;
+  margin: 0;
+  font-family: Georgia,游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN",HGS明朝E,メイリオ,Meiryo,serif;
+  text-align: center;
+}
+.yumeguri_note{
+  margin-bottom: 100px;
+  display: block;
+  margin-left:  auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: #dcce74;
+  color: black;
+}
+
+
+
+
+
+/* manual ================================ */
+.manual{
+  width: 1400px;
+  height: 350px;
+  padding:10px 15px;
+  padding-left: 150px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+  font-weight:normal;
+}
+/* about ================================ */
+.about{
+  background-image: url(/絵巻.jpg);
+  background-size: cover;
+  height: 700px;
+  margin-top: 50px;
+}
+
+.howto{
+  height: 600px;
+}
+
+
+
+
+.howto h1{
+  text-align: center;
+  padding-bottom: 50px;
+}
+.howto h2,li{
+    margin-left: 500px;
+  }
+
+.maki{
+    position: absolute;
+    top:250px;
+    left: 250px;
+    width: 160px;
+    height:160px;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YumeguriApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <header>
+    <img class="logo" src="/logo.png">
+    <a href="/about" class="link knowhow">使い方</a>
+    <a href="/" class="link home">ホーム</a>
+  </header>
+
+  <body>
+    <%= yield %>
+  </body>

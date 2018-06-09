@@ -1,0 +1,6 @@
+class AddColumnListToUrl < ActiveRecord::Migration[5.2]
+  def change
+    add_column :lists, :url, :string
+
+  end
+end

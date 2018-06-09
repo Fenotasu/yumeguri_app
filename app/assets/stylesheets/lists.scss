@@ -1,0 +1,88 @@
+// Place all the styles related to the lists controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* ここからヘッダー*/
+
+
+.logo{
+  position: absolute;
+  top:5px;
+  left: 40px;
+  width: 60px;
+  height:50px;
+}
+
+.link{
+  position: absolute;
+  top:5px;
+  right: 200px;
+  box-shadow: 5px 5px #04121a;
+  padding:0 15px ;
+  float: right;
+  margin: 10px 15px;
+  display: block;
+  background-color: #931F1D;
+  border-radius: 4px;
+  color: white;
+  opacity: 0.9;
+}
+.login:hover{
+  opacity: 1;
+}
+.login:active{
+  box-shadow: none;
+  position: relative;
+  top:5px;
+}
+.knowhow{
+  background-color: #215e65;
+  position: absolute;
+  top:5px;
+  right: 350px;
+}
+
+/* ここから投稿一覧ページ*/
+
+.lists{
+  margin-top:60px;
+  height: 1500px;
+  background-color: #f8f3d3;
+  .top{
+    text-align: center;
+    width: auto;
+      }
+  }
+
+
+
+.ichiran{
+  height: 100;
+  background-color: #f8f3d3;}
+
+.container{
+  .list-index-item{
+    border: groove;
+    height: 30px;
+    width: 600px;
+    text-align: left;
+    padding: 0px 30px;
+    margin-left: 300px;
+    padding-bottom: 50px;
+    background-color: white;}
+    float: left;
+  }
+
+  .list-index-item a{
+    color: #f906a9;
+    margin-right: 20px;
+  }
+
+  .container p{
+      font-size: 20px;
+
+    }
+
+  .list-time  {
+      font-size: 15px;
+  }
