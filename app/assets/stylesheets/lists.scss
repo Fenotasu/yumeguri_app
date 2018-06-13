@@ -2,87 +2,119 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/* ここからヘッダー*/
-/*  githubテスト */
 
-.logo{
-  position: absolute;
-  top:5px;
-  left: 40px;
-  width: 60px;
-  height:50px;
-}
-
-.link{
-  position: absolute;
-  top:5px;
-  right: 200px;
-  box-shadow: 5px 5px #04121a;
-  padding:0 15px ;
-  float: right;
-  margin: 10px 15px;
-  display: block;
-  background-color: #931F1D;
-  border-radius: 4px;
-  color: white;
-  opacity: 0.9;
-}
-.login:hover{
-  opacity: 1;
-}
-.login:active{
-  box-shadow: none;
-  position: relative;
-  top:5px;
-}
-.knowhow{
-  background-color: #215e65;
-  position: absolute;
-  top:5px;
-  right: 350px;
-}
 
 /* ここから投稿一覧ページ*/
 
 .lists{
+  position: absolute;
   margin-top:60px;
-  height: 1500px;
+  height: 600px;
   background-color: #f8f3d3;
-  .top{
+  .footer{
+    position: relative;
+    top: 300px;
+  }
+}
+
+.lists-top{
     text-align: center;
     width: auto;
       }
-  }
-
-
 
 .ichiran{
   height: 100;
   background-color: #f8f3d3;}
 
-.container{
   .list-index-item{
     border: groove;
-    height: 30px;
+    height: 50px;
     width: 600px;
     text-align: left;
     padding: 0px 30px;
-    margin-left: 300px;
+    margin-left: 330px;
     padding-bottom: 50px;
-    background-color: white;}
+    background-color: white;
     float: left;
   }
 
-  .list-index-item a{
-    color: #f906a9;
-    margin-right: 20px;
+  .listop h1{
+    color: gray;
+    opacity: 0.5;
+    margin-left: 20px;
   }
 
-  .container p{
-      font-size: 20px;
-
-    }
 
   .list-time  {
       font-size: 15px;
+      color: #8899a6;
+      margin-top: 0px;
+      text-align: left;
+      padding-left: 50px;
+      margin-left: 400px;
   }
+
+.list-index-item p{
+  font-size: 20px;
+  text-align: left;
+  float:left;
+  padding-left: 50px;
+}
+
+.list-index-item2 textarea{
+  height: 100px;
+  width: 500px;
+  margin-left: 400px;
+  font-size: 30px;
+}
+
+  /* ここから投稿詳細ページ*/
+
+.lists h1{
+  text-align: center;
+}
+
+/* ここから新規投稿ページ*/
+.lists3{
+  width: 100vw;
+  height: 400px;
+  background-color: #f8f3d3;
+}
+.lists-top3{
+  width: 70vw;
+  height: 200px;
+  margin-left: 200px;
+}
+
+.lists-top3 h1{
+  margin-top: 100px;
+  text-align: left;
+  opacity: 0.5;
+  color: #8899a6;
+}
+
+.form-body textarea{
+font-size: 20px;
+padding: 10px;
+min-height: 140px;
+border: 1px solid rgb(216, 218, 223);
+width: 40vw;
+}
+.form input[type="submit"]
+{
+position: absolute;
+margin-left: 500px;
+margin-top: 30px;
+box-shadow: 5px 5px #04121a;
+display: block;
+border-radius: 4px;
+color: black;
+opacity: 0.8;
+padding:0  20px;
+height: 30px;
+.form input[type="submit"]:active{
+  box-shadow: none;
+  position: relative;
+  top:5px;
+  left: 10px;
+}}

@@ -12,25 +12,23 @@
 <div class ="list">
 
 <body class="lists">
-    <div class="lists top">
-        <h1>投稿詳細</h1>
-        
-        <div class="ichiran">
+    <div class="listop">
+        <h1>編集する</h1>
 
+<%= form_tag("/lists/#{@list.id}/update")do %>
          <div class="container2">
 
-            <div class = "list-index-item">
-                <p>    <%= @list.content %>  </p>
-                <p>    <%= @list.comment %>  </p>
+            <div class = "list-index-item2">
+                <textarea name="comment">    <%= @list.comment %>  </textarea>
+                <input type="submit" value="保存">
                 <div class = "list-time">
                 <%= @list.date %>
-                <%= link_to" 編集", "/lists/#{@list.id}/edit"%>
-
                 </div>
             </div>
+            </div>
+<%end%>
 
 
-         </div>
   </body>
   <footer class="footer">
     <div class="last">

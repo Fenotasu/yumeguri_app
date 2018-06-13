@@ -24,43 +24,65 @@
     height:50px;
   }
 
-  .link{
-    position: absolute;
-    top:5px;
+.link{
+      float: right;
+      margin: 10px 15px;
+      position: absolute;
+      top:5px;
+      height: 25px;
+      box-shadow: 5px 5px #04121a;
+      padding-top: 8px;
+      display: block;
+      border-radius: 4px;
+      color: white;
+      opacity: 0.8;
+      padding-left: 10px;
+      padding-right: 10px;
+}
 
-    box-shadow: 5px 5px #04121a;
-    padding:0 15px ;
-    float: right;
-    display: block;
+  .home{
+    right: 250px;
     background-color: #931F1D;
-    border-radius: 4px;
-    color: white;
-    opacity: 0.9;
-    height: 25px;
-  }
-  .home:hover{
-    opacity: 1;
-  }
   .home:active{
     box-shadow: none;
     position: relative;
     top:5px;
     left: 10px;
   }
+}
+.home:hover{
+  opacity: 1;}
 
   .knowhow{
-    background-color: #215e65;
-    position: absolute;
-    top:5px;
     right: 350px;
-  }
+    background-color: #215e65;
   .knowhow:active{
     box-shadow: none;
     position: relative;
     top:5px;
     left: 10px;
-  }
+  }}
+  .knowhow:hover{
+    opacity: 1;}
 
+  .index{
+    right: 130px;
+    background-color: #d2a6f7;
+  .index:active{
+    box-shadow: none;
+  }}
+  .index:hover{
+    opacity: 1;}
+
+
+    .new{
+      right: 20px;
+      background-color: #1f75ef;
+    .new:active{
+      box-shadow: none;
+    }}
+    .new:hover{
+      opacity: 1;}
 
 
   /* footer ================================ */
@@ -68,10 +90,10 @@
     background-image: url(/木綿２.jpg);
   }
   footer img {
-    width: 100vw;
     height: 80px;
     padding-top: 40px;
     padding-left: 40px;
+
   }
 
   footer p {
@@ -82,5 +104,3 @@
   .footer {
     height:130px;
   }
-
-</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- viewportを読み込むための<meta>タグを記述-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>温泉巡り</title>
+    <link rel="stylesheet" href="温泉巡り.css">
+  </head>
+
+
+  <body class="lists3">
+
+      <div class="lists-top3">
+      <h1>新規投稿</h1>
+
+
+      <%= form_tag("/lists/create")do %>
+          <div class="form">
+            <div class="form-body">
+              <textarea name="comment"></textarea>
+              <input type=submit value="投稿">
+            </div>
+           </div>
+           <% end %>
+         </div>
+    </body>
+  </div>

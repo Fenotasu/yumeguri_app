@@ -8,30 +8,30 @@
     <link rel="stylesheet" href="温泉巡り.css">
   </head>
 
-  <div class ="list">
 
   <body class="lists">
 
-      <div class="lists top">
-      <h1>投稿一覧2</h1>
+      <div class="lists-top">
+      <h1>投稿一覧</h1>
 
-          <p>最新の温泉レポートはこちらから</p>
+      <p>最新の温泉レポートはこちらから</p>
+
           <div class="ichiran">
 
-           <div class="ichiran container">
             <% @lists.each do |list| %>
             <a>  <div class = "list-index-item"></a>
                 <%= link_to list.content,"/lists/#{list.id}" %>
                 <%= link_to"HomePage", list.url,  :target=>["_blank"] %>
                 <%= link_to"レビュー", list.review,  :target=>["_blank"] %>
-              <h2>  <%=list.comment%> </h2>
+              <h2>  <%= link_to list.comment,"/lists/#{list.id}" %> </h2>
 
            </div>
             <% end %>
            </div>
-    </body>
-    <footer class="footer">
-      <div class="last">
-          <img src="/あひる.png">
+           <footer class="footer">
 
+
+
+           </footer>
+    </body>
   </div>
