@@ -6,25 +6,21 @@
 
 /* ここから投稿一覧ページ*/
 
-.lists{
-  position: absolute;
-  margin-top:60px;
-  height: 600px;
+.page.list.index{
+  height: 100%;
   background-color: #f8f3d3;
-  .footer{
-    position: relative;
-    top: 300px;
-  }
 }
 
-.lists-top{
+.list.top{
+    height: 100%;
     text-align: center;
     width: auto;
       }
 
 .ichiran{
-  height: 100;
-  background-color: #f8f3d3;}
+  height: 100%;
+  background-color: #f8f3d3;
+  }
 
   .list-index-item{
     border: groove;
@@ -68,6 +64,13 @@
   font-size: 30px;
 }
 
+.list.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  margin-top: 100px;
+}
   /* ここから投稿詳細ページ*/
 
 .lists h1{

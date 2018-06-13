@@ -26,7 +26,19 @@ def update
   @list.comment=params[:comment]
   @list.save
   redirect_to("/lists/index")
-
 end
+
+def destroy
+  @list=List.find_by(id: params[:id])
+  @list.destroy
+  redirect_to("/lists/index")
+end
+
+
+
+
+
+
+
 
 end

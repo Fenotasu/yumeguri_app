@@ -14,7 +14,7 @@
 <body class="lists">
     <div class="lists top">
         <h1>投稿詳細</h1>
-        
+
         <div class="ichiran">
 
          <div class="container2">
@@ -25,7 +25,7 @@
                 <div class = "list-time">
                 <%= @list.date %>
                 <%= link_to" 編集", "/lists/#{@list.id}/edit"%>
-
+                <%= link_to("削除","/lists/#{@list.id}/destroy",{method:"post"})%>
                 </div>
             </div>
 

@@ -6,8 +6,8 @@ Rails.application.routes.draw do
 
   post "lists/create"=>"lists#create"
   get"lists/:id/edit"=>"lists#edit"
-
   post "lists/:id/update" => "lists#update"
+  post "lists/:id/destroy" => "lists#destroy"
 
   get '/' =>"home#top"
   get '/about'=>"home#about"
