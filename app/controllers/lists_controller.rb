@@ -1,14 +1,6 @@
 class ListsController < ApplicationController
-  def index
-    @lists=List.all.order(created_at: :desc)
-  end
 
-  def show
-    @list= List.find_by(id: params[:id])
-  end
 
-def new
-end
 
 def create
   @list=List.new(comment: params[:comment])
