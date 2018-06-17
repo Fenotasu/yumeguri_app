@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(:name=>"木下ゆうすけ", email=>"yuyu@gmail.com")
-User.create(:name=>"矢仲みゆ", email=>"miyuyu@gmail.com")
+User.create(:name=>"木下ゆうすけ", :email=>"yuyu@gmail.com")
+User.create(:name=>"矢仲みゆ", :email=>"miyuyu@gmail.com")
 
 List.create(:content => '有馬温泉', :name=>"矢仲", :place=>"兵庫県神戸市", :date=>"2018-02-20", :comment=>"秀吉の愛した黄金の湯", :url=>"https://www.google.co.jp/maps/place/%E9%87%91%E3%81%AE%E6%B9%AF/@34.7967975,135.2478857,3a,110.1y,90t/data=!3m8!1e2!3m6!1shttp:%2F%2Fonsen-trip.com%2Fwordpress%2Fwp-content%2Fuploads%2F2015%2F06%2Fkinnnoyu_gaikan_0616.jpg!2e7!3e27!6s%2F%2Flh3.googleusercontent.com%2Fproxy%2Fcig4PLQFY1LPuiS2J_Aixkl_GL4Hb1YNYrW4Jc3ZEJ7YLvPdZsQnz90yBYw0KjOTOjfwfdvNN2C4SJhMpfc8jRTqpdWE9ga_gO9hxHjvpLZ84YJD_7sYgfs9aPtPO7TPh30iqpl1tom4WPUal6P1b9S6gaoyWIg%3Dw114-h86-k-no!7i480!8i360!4m5!3m4!1s0x60008a421f54ae6f:0x813b87b82220f0cf!8m2!3d34.7967975!4d135.2478857", :review=>"https://www.google.co.jp/maps/place/%E9%87%91%E3%81%AE%E6%B9%AF/@34.7968019,135.245697,17z/data=!4m7!3m6!1s0x60008a421f54ae6f:0x813b87b82220f0cf!8m2!3d34.7967975!4d135.2478857!9m1!1b1")
 

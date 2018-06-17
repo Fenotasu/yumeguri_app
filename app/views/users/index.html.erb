@@ -11,9 +11,6 @@
             <% @users.each do |user| %>
             <a>  <div class = "user-index-item"></a>
               <h2>  <%= link_to user.name,"/users/#{user.id}" %></h2>
-
-              <h2>  <%= link_to user.email,"/users/#{user.id}" %> </h2>
-
            </div>
             <% end %>
            </div>

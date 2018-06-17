@@ -4,15 +4,22 @@
   <body class="users3">
 
       <div class="users-top3">
-      <h1>新規投稿</h1>
+      <h1>新規ユーザー登録</h1>
 
 
       <%= form_tag("/users/create")do %>
           <div class="form">
             <div class="form-body">
+              <%@user.errors.full_messages.each do |message|%>
+              <div class ="form-error">
+              <%=message%>
+              </div>
+              <%end%>
+              <h2>アカウント名</h2>
               <textarea name="name"></textarea>
+              <h2>アドレス</h2>
               <textarea name="email"></textarea>
-              <input type=submit value="投稿">
+              <input type=submit value="保存">
             </div>
            </div>
            <% end %>

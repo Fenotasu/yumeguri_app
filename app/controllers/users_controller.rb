@@ -8,13 +8,14 @@ def show
 end
 
 def new
+  @user=User.new
 end
 
 def create
-  @user=User.new(name: params[:name])
-  @user=User.new(email: params[:email])
+  @user=User.new(name: params[:name],email: params[:email])
   if @user.save
-  redirect_to("/users/index")
+    flash[:notice]="ユーザー登録が完了しました。"
+    redirect_to("/users/index")
   else
    redirect_to("/users/new")
   end
@@ -28,7 +29,6 @@ end
 def update
   @user=User.find_by(id: params[:id])
   @user.email=params[:email]
-
    if
    @user.save
    redirect_to("/users/index")
