@@ -12,8 +12,11 @@ end
 
 def create
   @list=List.new(comment: params[:comment])
-  @list.save
+  if @list.save
   redirect_to("/lists/index")
+  else
+   redirect_to("/lists/new")
+  end
 end
 
 
@@ -24,8 +27,13 @@ end
 def update
   @list=List.find_by(id: params[:id])
   @list.comment=params[:comment]
-  @list.save
-  redirect_to("/lists/index")
+
+   if
+   @list.save
+   redirect_to("/lists/index")
+   else
+   redirect_to("/lists/#{@list.id}/edit")
+   end
 end
 
 def destroy

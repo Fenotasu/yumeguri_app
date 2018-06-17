@@ -1,0 +1,29 @@
+
+
+
+<div class ="user">
+
+<body class="users">
+    <div class="usertop">
+        <h1>アドレスを編集する</h1>
+
+<%= form_tag("/users/#{@user.id}/update")do %>
+         <div class="container2">
+
+            <div class = "user-index-item2">
+                <textarea name="email">    <%= @user.email %>  </textarea>
+                <input type="submit" value="保存">
+                <div class = "user-time">
+                <%= @user.name %>
+                </div>
+            </div>
+            </div>
+<%end%>
+
+
+  </body>
+  <footer class="footer">
+    <div class="last">
+        <img src="/あひる.png">
+
+</div>

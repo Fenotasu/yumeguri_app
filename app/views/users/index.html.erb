@@ -1,0 +1,24 @@
+
+
+
+  <body class="page user index">
+
+      <div class="user top">
+      <h1>ユーザー一覧</h1>
+
+          <div class="ichiran">
+
+            <% @users.each do |user| %>
+            <a>  <div class = "user-index-item"></a>
+              <h2>  <%= link_to user.name,"/users/#{user.id}" %></h2>
+
+              <h2>  <%= link_to user.email,"/users/#{user.id}" %> </h2>
+
+           </div>
+            <% end %>
+           </div>
+           <footer class="user footer">
+
+           </footer>
+    </body>
+  </div>

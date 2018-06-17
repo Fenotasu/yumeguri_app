@@ -1,4 +1,7 @@
-// Place all the styles related to the lists controller here.
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
@@ -6,13 +9,14 @@
 
 /* ここから投稿一覧ページ*/
 
-.page.list.index{
+.page.user.index{
+  width: 100vw;
   height: 100%;
   background-color: #f8f3d3;
   position: absolute;
 }
-.list.footer{
-
+.user.footer{
+ width: 100vw;
   position: relative;
   bottom: 0;
   width: 100%;
@@ -20,20 +24,21 @@
   margin-top: 100px;
 }
 
-.list.top{
-  
+.user.top{
+   margin-top: 100px;
     height: 100%;
     text-align: center;
-    width: auto;
+    width: 100vw;
       }
 
 .ichiran{
+  width: 100vw;
   height: 100%;
   background-color: #f8f3d3;
 
   }
 
-  .list-index-item{
+  .user-index-item{
     border: groove;
     height: 50px;
     width: 600px;
@@ -45,14 +50,14 @@
     float: left;
   }
 
-  .listop h1{
+  .usertop h1{
     color: gray;
     opacity: 0.5;
     margin-left: 20px;
   }
 
 
-  .list-time  {
+  .user-time  {
       font-size: 15px;
       color: #8899a6;
       margin-top: 0px;
@@ -61,14 +66,14 @@
       margin-left: 400px;
   }
 
-.list-index-item p{
+.user-index-item p{
   font-size: 20px;
   text-align: left;
   float:left;
   padding-left: 50px;
 }
 
-.list-index-item2 textarea{
+.user-index-item2 textarea{
   height: 100px;
   width: 500px;
   margin-left: 400px;
@@ -78,23 +83,23 @@
 
   /* ここから投稿詳細ページ*/
 
-.lists h1{
+.users h1{
   text-align: center;
 }
 
 /* ここから新規投稿ページ*/
-.lists3{
+.users3{
   width: 100vw;
   height: 400px;
   background-color: #f8f3d3;
 }
-.lists-top3{
+.users-top3{
   width: 70vw;
   height: 200px;
   margin-left: 200px;
 }
 
-.lists-top3 h1{
+.users-top3 h1{
   margin-top: 100px;
   text-align: left;
   opacity: 0.5;

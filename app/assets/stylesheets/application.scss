@@ -40,7 +40,7 @@
       padding-right: 10px;
 }
 
-  .home{
+  .home.icon{
     right: 250px;
     background-color: #931F1D;
   .home:active{
@@ -73,6 +73,24 @@
   }}
   .index:hover{
     opacity: 1;}
+
+    .signup{
+      right: 600px;
+      background-color: #2a6521;
+    .signup:active{
+      box-shadow: none;
+    }}
+    .signup:hover{
+      opacity: 1;}
+
+    .usericon{
+      right: 450px;
+      background-color: #2a2165;
+    .users:active{
+      box-shadow: none;
+    }}
+    .users:hover{
+      opacity: 1;}
 
 
     .new{
