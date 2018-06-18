@@ -12,7 +12,11 @@ def new
 end
 
 def create
-  @user=User.new(name: params[:name],email: params[:email])
+  @user=User.new(
+    name: params[:name],
+    email: params[:email],
+    users_image:"logo.png"
+  )
   if @user.save
     flash[:notice]="ユーザー登録が完了しました。"
     redirect_to("/users/index")

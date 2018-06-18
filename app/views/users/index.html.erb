@@ -10,10 +10,11 @@
 
             <% @users.each do |user| %>
             <a>  <div class = "user-index-item"></a>
+              <img src="<%="/user_images/#{user.users_image}"%>">
               <h2>  <%= link_to user.name,"/users/#{user.id}" %></h2>
            </div>
             <% end %>
-           </div>
+          </div>s
            <footer class="user footer">
 
            </footer>

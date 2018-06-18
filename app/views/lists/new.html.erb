@@ -10,6 +10,11 @@
       <%= form_tag("/lists/create")do %>
           <div class="form">
             <div class="form-body">
+              <% @list.errors.full_messages.each do |message| %>
+              <div class="form-error">
+              <%= message %>
+              </div>
+              <% end %>
               <textarea name="comment"></textarea>
               <input type=submit value="投稿">
             </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_15_233836) do
+ActiveRecord::Schema.define(version: 2018_06_18_221843) do
 
   create_table "lists", force: :cascade do |t|
     t.text "content"
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 2018_06_15_233836) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "users_image"
   end
 
   create_table "yumegurichous", force: :cascade do |t|
