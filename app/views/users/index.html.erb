@@ -7,6 +7,12 @@
       <h1>ユーザー一覧</h1>
 
           <div class="ichiran">
+            <% if flash[:notice] %>
+            <div class="flash">
+              <%= flash[:notice] %>
+            </div>
+            <% end %>
+
 
             <% @users.each do |user| %>
             <a>  <div class = "user-index-item"></a>

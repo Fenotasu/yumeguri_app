@@ -21,7 +21,7 @@ def create
     flash[:notice]="ユーザー登録が完了しました。"
     redirect_to("/users/index")
   else
-   redirect_to("/users/new")
+   render 'new'
   end
 end
 
