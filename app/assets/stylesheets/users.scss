@@ -50,6 +50,20 @@
     float: left;
     margin-bottom: 10px;
   }
+.user-index-item a{
+  text-align: center;
+  font-size: 30px;
+  float: left;
+  padding-top: 30px;
+  padding-left: 50px;
+}
+.user-left img{
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  float: left;
+  padding-top: 20px;
+}
 
   .usertop h1{
     color: gray;
@@ -83,6 +97,59 @@
   width: 500px;
   margin-left: 400px;
   font-size: 30px;
+}
+
+/* ここからユーザー詳細ページ*/
+.user-show-body{
+  width: 100vw;
+  height:100vw;
+}
+.user-show-top{
+      margin-top: 100px;
+      text-align: center;
+      width: 100vw;
+      img{
+        height: 100px;
+        width: 100px;
+      }
+}
+.show-container{
+  height: 100%;
+  width: 100vw;
+}
+.user-show-item{
+  font-size: 15px;
+}
+
+/* ここからユーザー編集ページ*/
+.user-edit-body{
+  width: 100vw;
+  height:100vw;
+}
+.user-edit-top{
+  margin-top: 100px;
+  height: 100px;
+  text-align: center;}
+
+.user-edit-top h1{opacity: 0.3;
+}
+.user-edit-inbox{
+  height: 400px;
+  text-align: center;
+}
+
+.user-image-edit img{
+  height: 100px;
+  width: 100px;
+}
+
+.user-name-edit{
+  height: 100px;
+  text-align: center;
+  font-size: 35px;
+}
+.user-info-save textarea{
+  width: 300px;
 }
 
 

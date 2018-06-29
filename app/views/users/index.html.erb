@@ -15,12 +15,16 @@
 
 
             <% @users.each do |user| %>
-            <a>  <div class = "user-index-item"></a>
+            <div class = "user-index-item">
+            <div class ="user-left">
               <img src="<%="/user_images/#{user.users_image}"%>">
-              <h2>  <%= link_to user.name,"/users/#{user.id}" %></h2>
+            </div>
+            <div class ="user-right">
+              <a>  <%= link_to user.name,"/users/#{user.id}" %></a>
+            </div>
            </div>
             <% end %>
-          </div>s
+          </div>
            <footer class="user footer">
 
            </footer>

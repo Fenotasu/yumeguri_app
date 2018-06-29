@@ -33,7 +33,11 @@ end
 def update
   @user=User.find_by(id: params[:id])
   @user.email=params[:email]
-   if
+
+   if params[:image]
+   @user.users_image="#{@user.id}.jpg"
+   image = params[:image]
+   File.binwrite("public/user_images/#{@user.users_image}", image.read)
    @user.save
    redirect_to("/users/index")
    else

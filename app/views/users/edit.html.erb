@@ -1,25 +1,27 @@
 
-
-
-<div class ="user">
-
-<body class="users">
-    <div class="usertop">
-        <h1>アドレスを編集する</h1>
-        <div class = "user-name">
-        <%= "ユーザー名：#{@user.name} "%>
+<body class="user-edit-body">
+    <div class="user-edit-top">
+        <h1>ユーザー情報を編集する</h1>
+    </div>
+    <div class= "user-edit-inbox">
+      <div class = "user-image-edit">
+    <img src="<%="/user_images/#{@user.users_image}"%>">
+      </div>
+        <div class = "user-name-edit">
+        <%= "#{@user.name} "%>
         </div>
-<%= form_tag("/users/#{@user.id}/update")do %>
-         <div class="container2">
 
-            <div class = "user-index-item2">
+<%= form_tag("/users/#{@user.id}/update", {multipart: true}) do %>
+            <div class = "user-info-save">
+                <input name ="image" type="file">
                 <textarea name="email">    <%= @user.email %>  </textarea>
                 <input type="submit" value="保存">
 
             </div>
             </div>
-<%end%>
+          <%end%>
 
+</div>
 
   </body>
 
