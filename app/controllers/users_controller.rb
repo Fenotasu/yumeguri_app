@@ -73,4 +73,11 @@ end
 end
 
 
+def logout
+  session[:user_id]=nill
+  flash[:notice]="ログアウトしました"
+  redirect_to("/login")
+end
+
+
 end

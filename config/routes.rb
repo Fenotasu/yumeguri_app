@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  post"logout"=>"users#logout"
+  
   get "login"=>"users#login_form"
   post"login"=>"users#login"
 
