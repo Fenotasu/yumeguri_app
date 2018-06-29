@@ -15,7 +15,8 @@ def create
   @user=User.new(
     name: params[:name],
     email: params[:email],
-    users_image:"logo.png"
+    users_image:"logo.png",
+    password: params[:password]
   )
   if @user.save
     flash[:notice]="ユーザー登録が完了しました。"
@@ -51,6 +52,25 @@ def destroy
   redirect_to("/users/index")
 end
 
+def login_form
+end
+
+def login
+  @user=User.find_by(email: params[:email],password: params[:password] )
+if @user
+  session[:user_id]=@user.id
+  flash[:notice] = "ログインしました"
+  redirect_to("/lists/index")
+else
+  @error_message="メールアドレスまたはパスワードが間違っています。"
+
+  @email= params[:email]
+  @password=params[:password]
+
+  render("users/login_form")
+end
+
+end
 
 
 end

@@ -8,6 +8,8 @@
 
 
       <%= form_tag("/users/create")do %>
+      <!-- <%= label_tag :name %> -->
+      <!-- <%= text_field_tag :name %> -->
           <div class="form">
             <div class="form-body">
               <%@user.errors.full_messages.each do |message|%>
@@ -15,10 +17,12 @@
               <%=message%>
               </div>
               <%end%>
-              <h2>アカウント名</h2>
-              <textarea name="name"></textarea>
-              <h2>アドレス</h2>
-              <textarea name="email"></textarea>
+              <label for="name" >アカウント名</label>
+              <textarea name="name" id="name"></textarea>
+              <label for="email">アドレス</label>
+              <textarea name="email" id="email"></textarea>
+              <label for="password">パスワード</label>
+              <textarea name="password" id="password" type="password"></textarea>
               <input type=submit value="保存">
             </div>
            </div>

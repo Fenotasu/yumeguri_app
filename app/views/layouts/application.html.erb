@@ -9,6 +9,9 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <header>
+    <%if session[:user_id]%>
+    <li>現在のログイン中のユーザー<%= session[:user_id]%></li>
+    <%end%>
     <img class="logo" src="/logo.png">
     <a href="/about" class="link knowhow">使い方</a>
     <a href="/" class="link home icon">ホーム</a>
@@ -16,6 +19,8 @@
     <a href="/lists/new" class="link new">新規投稿</a>
     <a href="/users/new" class="link signup">新規登録</a>
     <a href="/users/index" class="link usericon">ユーザ一覧</a>
+        <a href="/login" class="link loginicon">ログイン</a>
+
   </header>
 
   <body>
