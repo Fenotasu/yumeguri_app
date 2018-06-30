@@ -13,10 +13,19 @@
 
 <%= form_tag("/users/#{@user.id}/update", {multipart: true}) do %>
             <div class = "user-info-save">
+                <div class ="image-save-button" >
                 <input name ="image" type="file">
-                <textarea name="email">    <%= @user.email %>  </textarea>
+                </div>
+                <div class ="edit-email" >Email:
+                <textarea name="email">    <%= @user.email %>
+                </textarea>
+                </div>
+                <div class ="edit-password" >PW:
+                <textarea name="password">    <%= @user.password %>  </textarea>
+                <div class ="save-button" >
                 <input type="submit" value="保存">
-
+              </div>
+                </div>
             </div>
             </div>
           <%end%>

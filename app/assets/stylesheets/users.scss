@@ -149,16 +149,28 @@
 }
 
 .user-name-edit{
-  height: 100px;
+  height: 50px;
   text-align: center;
   font-size: 35px;
+  margin-top: 50px;
+  padding-bottom: 30px;
 }
 .user-info-save textarea{
   width: 300px;
 }
-
-
-
+.image-save-button{
+  margin-left: 100px;
+}
+.edit-email{
+  margin-top: 20px;
+}
+.edit-password{
+  margin-left: 15px;
+  margin-top: 20px;
+}
+.save-button{
+  margin-top: 20px;
+}
 /* ここから新規登録ページ*/
 .users3{
   width: 100vw;
