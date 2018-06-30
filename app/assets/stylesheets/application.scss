@@ -101,14 +101,23 @@
     .new:hover{
       opacity: 1;}
 
-      .loginicon{
+      .login{
         right: 750px;
         background-color: blue;
-      .signup:active{
+      .login :active{
         box-shadow: none;
       }}
-      .signup:hover{
+      .login :hover{
         opacity: 1;}
+
+        .logout{
+          right: 350px;
+          background-color: blue;
+        .logout:active{
+          box-shadow: none;
+        }}
+        .logout :hover{
+          opacity: 1;}
 
 /* session 情報 ================================ */
 li{
