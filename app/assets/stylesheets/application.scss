@@ -3,6 +3,8 @@
   *= require_self
   */
   header{
+    display: flex;
+    flex-direction: row-reverse;
     height: 60px;
     width:100vw;
     background-image: url(/木綿.jpg);
@@ -14,115 +16,68 @@
   }
 
   /* ヘッダー ================================ */
-
-
-  .logo{
-    position: absolute;
-    top:5px;
-    left: 40px;
-    width: 60px;
-    height:50px;
+  .status{
+    margin-top: 10px;
+    font-size: 2em;
+    margin-right: 70px;
+    color: white;
+  }
+  .link{
+        margin: 10px 15px;
+        top:5px;
+        height: 25px;
+        width: 90px;
+        box-shadow: 5px 5px #04121a;
+        padding-top: 8px;
+        border-radius: 4px;
+        color: white;
+        opacity: 0.8;
+        text-align: center;
   }
 
-.link{
-      float: right;
-      margin: 10px 15px;
-      position: absolute;
+
+    .icon:active{
+      box-shadow: none;
+      position: relative;
       top:5px;
-      height: 25px;
-      box-shadow: 5px 5px #04121a;
-      padding-top: 8px;
-      display: block;
-      border-radius: 4px;
-      color: white;
-      opacity: 0.8;
-      padding-left: 10px;
-      padding-right: 10px;
-}
+      left: 10px;
+    }
+  .icon:hover{
+    opacity: 1;}
 
-  .home.icon{
-    right: 250px;
-    background-color: #931F1D;
-  .home:active{
-    box-shadow: none;
-    position: relative;
-    top:5px;
-    left: 10px;
+    .home{
+      background-color: #931F1D;
+    }
+
+    .knowhow{
+      background-color: #215e65;}
+
+    .index{
+      background-color: #d2a6f7;
   }
-}
-.home:hover{
-  opacity: 1;}
 
-  .knowhow{
-    right: 350px;
-    background-color: #215e65;
-  .knowhow:active{
-    box-shadow: none;
-    position: relative;
-    top:5px;
-    left: 10px;
-  }}
-  .knowhow:hover{
-    opacity: 1;}
-
-  .index{
-    background-color: #d2a6f7;
-  .index:active{
-    box-shadow: none;
-  }}
-  .index:hover{
-    opacity: 1;}
-
-    .signup{
-      right: 600px;
-      background-color: #2a6521;
-    .signup:active{
-      box-shadow: none;
-    }}
-    .signup:hover{
-      opacity: 1;}
-
-    .usericon{
-      right: 450px;
-      background-color: #2a2165;
-    .users:active{
-      box-shadow: none;
-    }}
-    .users:hover{
-      opacity: 1;}
+      .signup{
+        background-color: #2a6521;
+  }
 
 
-    .new{
-      right: 20px;
-      background-color: #1f75ef;
-    .new:active{
-      box-shadow: none;
-    }}
-    .new:hover{
-      opacity: 1;}
+      .usericon{
+        background-color: #2a2165;
+  }
 
-      .login{
-        right: 750px;
-        background-color: blue;
-      .login :active{
-        box-shadow: none;
-      }}
-      .login :hover{
-        opacity: 1;}
+      .new{
+        background-color: #1f75ef;
+  }
 
-        .logout{
-          right: 350px;
+        .login{
           background-color: blue;
-        .logout:active{
-          box-shadow: none;
-        }}
-        .logout :hover{
-          opacity: 1;}
+  }
 
-/* session 情報 ================================ */
-li{
+          .logout{
+            background-color: blue;
+  }
 
-}
+
 
   /* footer ================================ */
   footer {

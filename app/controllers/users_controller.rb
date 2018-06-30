@@ -20,6 +20,7 @@ def create
   )
   if @user.save
     flash[:notice]="ユーザー登録が完了しました。"
+    session[:user_id]=@user.id
     redirect_to("/users/index")
   else
    render 'new'
@@ -78,6 +79,7 @@ def logout
   flash[:notice]="ログアウトしました"
   redirect_to("/login")
 end
+
 
 
 end
