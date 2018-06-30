@@ -10,6 +10,11 @@
           <%= @error_message%>
         </div>
         <%end%>
+        <%if flash[:notice]%>
+        <div class="login-flash">
+          <%=flash[:notice]%>
+        </div>
+        <%end%>
 
         <%= form_tag("/login") do %>
         <p>メールアドレス</p>
