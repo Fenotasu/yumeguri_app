@@ -12,5 +12,11 @@ def authenticate_user
   end
 end
 
+def forbid_login_user
+  if @current_user
+    flash[:notice]="既にログインしています"
+    redirect_to("/lists/index")
+  end
+end
 
 end

@@ -2,11 +2,13 @@
 
 
   <body class="page list index">
-
+      <div class="top-flash">
+      <%if flash[:notice]%>
+      <%=flash[:notice]%>
+      <%end%>
+      </div>
       <div class="list top">
       <h1>投稿一覧</h1>
-
-      <p>最新の温泉レポートはこちらから</p>
 
           <div class="ichiran">
 
