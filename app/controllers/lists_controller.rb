@@ -11,6 +11,7 @@ class ListsController < ApplicationController
   def show
     @list= List.find_by(id: params[:id])
     @user=User.find_by(id: @list.user_id)
+    # @user=@list.users
   end
 
 def new
