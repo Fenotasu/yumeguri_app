@@ -10,18 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_29_064415) do
+ActiveRecord::Schema.define(version: 2018_07_01_003110) do
 
   create_table "lists", force: :cascade do |t|
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
     t.string "place"
     t.date "date"
     t.string "comment"
     t.string "url"
     t.string "review"
+    t.integer "user_id"
+    t.string "name"
   end
 
   create_table "posts", force: :cascade do |t|

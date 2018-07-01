@@ -5,9 +5,9 @@
 
 
 /* ここから投稿一覧ページ*/
-.top-flash{
-  height: 100px;
-  margin-top: 150px;
+.flash{
+  height: 50px;
+  margin-top: 80px;
   text-align: center;
   font-size: 2em;
   color: gray;
@@ -37,7 +37,7 @@
 
 .ichiran{
   height: 100%;
-  background-color: #f8f3d3;
+  background-color: white;
 
   }
 
@@ -50,9 +50,16 @@
     margin-left: 330px;
     padding-bottom: 50px;
     background-color: white;
-    float: left;
   }
+.list-index-item img{
+  height: 70px;
+  width: 70px;
+  float: left;
+}
 
+.list-index-item h3{
+  color: green;
+}
   .listop h1{
     color: gray;
     opacity: 0.5;
@@ -75,6 +82,7 @@
   text-align: left;
   float:left;
   padding-left: 50px;
+  margin-top: 0;
 }
 
 .list-index-item2 textarea{
@@ -86,9 +94,22 @@
 
 
   /* ここから投稿詳細ページ*/
+.list-show{
+  height: 100vh;
+  position: absolute;
+}
 
-.lists h1{
-  text-align: center;
+.list-index-container{
+  margin-top: 200px;
+  height: 500px;
+}
+.list-show-footer{
+  width: 100vw;
+  height: 50px;
+  background-image: url(/木綿２.jpg);
+  position: relative;
+  bottom: 0;
+  margin-top: 300px;
 }
 
 /* ここから新規投稿ページ*/

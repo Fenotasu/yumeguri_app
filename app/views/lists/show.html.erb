@@ -1,31 +1,16 @@
-
-
-
-<div class ="list">
-
-<body class="lists">
-    <div class="lists top">
-        <h1>投稿詳細</h1>
-
-        <div class="ichiran">
-
-         <div class="container2">
-
-            <div class = "list-index-item">
-                <p>    <%= @list.content %>  </p>
+<body class="list-show">
+    <div class="list-index-container">
+        <div class = "list-index-item">
+                <img src="<%="/user_images/#{@user.users_image}"%>">
+                <h3>    <%= @user.name %>  </h3>
                 <p>    <%= @list.comment %>  </p>
-                <div class = "list-time">
+             <div class = "list-time">
                 <%= @list.date %>
                 <%= link_to" 編集", "/lists/#{@list.id}/edit"%>
                 <%= link_to("削除","/lists/#{@list.id}/destroy",{method:"post"})%>
-                </div>
-            </div>
-
-
-         </div>
-  </body>
-  <footer class="footer">
-    <div class="last">
-        <img src="/あひる.png">
-
+             </div>
+    </div>
+<div class="list-show-footer">
+    <img src="/あひる.png">
 </div>
+  </body>

@@ -4,6 +4,14 @@ class UsersController < ApplicationController
 
   before_action :forbid_login_user, {only: [:new, :create, :login_form, :login]}
 
+before_action :ensure_correct_user,{only: [:edit, :update]}
+
+  def ensure_correct_user
+    if @current_user.id != params[:id].to_i
+      flash[:notice]="権限がありません"
+      redirect_to("/users/index")
+    end
+  end
 
   def index
     @users=User.all.order(created_at: :desc)
@@ -57,9 +65,6 @@ def update
      else
      redirect_to("/users/#{@user.id}/edit")
    end
-
-
-
 end
 
 

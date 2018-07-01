@@ -10,13 +10,17 @@ class ListsController < ApplicationController
 
   def show
     @list= List.find_by(id: params[:id])
+    @user=User.find_by(id: @list.user_id)
   end
 
 def new
+  @list=List.new
 end
 
 def create
-  @list=List.new(comment: params[:comment])
+  @list=List.new(comment: params[:comment],
+  user_id: @current_user.id)
+
   if @list.save
   redirect_to("/lists/index")
   else
