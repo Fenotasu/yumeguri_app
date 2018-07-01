@@ -18,7 +18,7 @@
             <div class="show-lists">
               <% @user.lists.each do |list| %>
               <div class="list-index-item2">
-              <%=list.comment%>
+              <%=link_to list.comment,"/lists/#{list.id}"%>
               </div>
               <%end%>
             </div>

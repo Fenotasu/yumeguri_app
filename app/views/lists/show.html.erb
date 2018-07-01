@@ -6,8 +6,9 @@
                 <p>    <%= @list.comment %>  </p>
              <div class = "list-time">
                 <%= @list.date %>
+                <% if @list.user_id==@current_user.id %>
                 <%= link_to" 編集", "/lists/#{@list.id}/edit"%>
-                <%= link_to("削除","/lists/#{@list.id}/destroy",{method:"post"})%>
+                <%= link_to("削除","/lists/#{@list.id}/destroy",{method:"post"})%><%end%>
              </div>
     </div>
 <div class="list-show-footer">
