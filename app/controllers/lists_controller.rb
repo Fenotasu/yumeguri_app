@@ -2,7 +2,15 @@ class ListsController < ApplicationController
 
   before_action :authenticate_user, {only: [:index, :show, :edit, :update]}
 
+ before_action :ensure_correct_user,{only: [:edit, :update, :destroy] }
 
+ def ensure_correct_user
+   @list=List.find_by(id: params[:id])
+   if @list.user_id !=@current_user.id
+     flash[:notice]="権限がありません"
+     redirect_to("/lists/index")
+   end
+ end
 
   def index
     @lists=List.all.order(created_at: :desc)

@@ -1,28 +1,20 @@
 
 
 
-<div class ="list">
 
-<body class="lists">
-    <div class="listop">
-        <h1>編集する</h1>
 
+<body class="list-edit">
+<h2>コメントの編集</h2>
 <%= form_tag("/lists/#{@list.id}/update")do %>
-         <div class="container2">
-            <div class = "list-index-item2">
-                <textarea name="comment">    <%= @list.comment %>  </textarea>
+            <div class = "list-show-item">
+
+                <textarea name="comment">
+                  <%= @list.comment %>  </textarea>
                 <input type="submit" value="保存">
-                <div class = "list-time">
-                <%= @list.date %>
                 </div>
-            </div>
-            </div>
 <%end%>
 
-
   </body>
-  <footer class="footer">
-    <div class="last">
-        <img src="/あひる.png">
+
 
 </div>
