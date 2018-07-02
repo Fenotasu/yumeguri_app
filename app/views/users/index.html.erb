@@ -4,26 +4,25 @@
   <body class="page user index">
 
       <h1>ユーザー一覧</h1>
-
+<!-- flash -->
+                    <% if flash[:notice] %>
+                    <div class="flash">
+                      <%= flash[:notice] %>
+                    </div>
+                    <% end %>
+<!--  flashここまで-->
           <div class="ichiran">
-            <% if flash[:notice] %>
-            <div class="flash">
-              <%= flash[:notice] %>
-            </div>
-            <% end %>
-
-
             <% @users.each do |user| %>
-            <div class = "user-index-item">
-            <div class ="user-left">
-              <img src="<%="/user_images/#{user.users_image}"%>">
-            </div>
-            <div class ="user-right">
-              <a>  <%= link_to user.name,"/users/#{user.id}" %></a>
-            </div>
-           </div>
+                  <div class = "user-index-item">
+                        <div class ="user-left">
+                          <img src="<%="/user_images/#{user.users_image}"%>">
+                        </div>
+                      <div class ="user-right">
+                        <a>  <%= link_to user.name,"/users/#{user.id}" %></a>
+                      </div>
+                 </div>
             <% end %>
-          <!-- </div> -->
+          </div>
 
            <div class="user-footer">
 
