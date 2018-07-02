@@ -43,12 +43,11 @@
 
   .list-index-item{
     border: groove;
-    height: 50px;
+    height: 100px;
     width: 600px;
     text-align: left;
     padding: 0px 30px;
     margin-left: 330px;
-    padding-bottom: 50px;
     background-color: white;
   }
 .list-index-item img{
@@ -57,8 +56,9 @@
   float: left;
 }
 
-.list-index-item h3{
+.list-user-name{
   color: green;
+  font-size: 1.5em;
 }
   .listop h1{
     color: gray;
@@ -67,22 +67,23 @@
   }
 
 
-  .list-time  {
-      font-size: 15px;
-      color: #8899a6;
-      margin-top: 0px;
-      text-align: left;
-      padding-left: 50px;
-      margin-left: 400px;
-      width: 300px;
-  }
 
-.list-index-item p{
+
+.list-user-comment{
   font-size: 20px;
   text-align: left;
-  float:left;
   padding-left: 50px;
-  margin-top: 0;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.like{
+  color: pink;
+  margin-top: 10px;
+  padding-left: 70px;
+}
+
+.list-edit-link{
+  float: right;
 }
 
 .list-index-item2 textarea{
@@ -110,6 +111,10 @@
   position: relative;
   bottom: 0;
   margin-top: 300px;
+}
+
+.like{
+
 }
 /* ここから投稿編集ページ*/
 .list-edit{
