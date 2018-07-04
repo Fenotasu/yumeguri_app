@@ -7,7 +7,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
   </head>
   <header>
       <div class="header-left">
@@ -16,6 +16,7 @@
                     <%@current_user=User.find_by(id:session[:user_id])%>
                     <a><%= link_to(@current_user.name,"/users/#{@current_user.id}") %></a>
                 <%end%>
+
       </div>
       <div class="header-right">
           <%@current_user=User.find_by(id:session[:user_id])%>

@@ -5,23 +5,27 @@
                       <div class ="list-user-name">
                         <%= @user.name %>  </div>
                             <div class="list-user-comment">
-                              <%= @list.comment %>  </div>
-                              <% if @list.user_id==@current_user.id %>
-                              <div class ="list-edit-link">
-                              <%= link_to" 編集", "/lists/#{@list.id}/edit"%>
-                              <%= link_to("削除","/lists/#{@list.id}/destroy",{method:"post"})%><%end%>
+                                    <%= @list.comment %>  </div>
+                                    <% if @list.user_id==@current_user.id %>
+                                    <div class ="list-edit-link">
+                                        <%= link_to" 編集", "/lists/#{@list.id}/edit"%>
+                                        <%= link_to("削除","/lists/#{@list.id}/destroy",{method:"post"})%><%end%>
+                                    </div>
+                                    <div class="like">
+                                          <% if Like.find_by(user_id: @current_user.id, list_id: @list.id) %>
+                                            <%= link_to( "/likes/#{@list.id}/destroy", {method: "post"})do %>
+                                                  <span class="fab fa-gratipay unlike"></span>
+                                                  <%end%>            
+                                          <% else %>
+                                            <%= link_to("/likes/#{@list.id}/create", {method: "post"})do%>
+                                             <span class="fab fa-gratipay"></span>
+                                             <%end%>
+                                          <% end %>
+                                    </div>
                             </div>
-                            <div class="like">
-                              <% if Like.find_by(user_id: @current_user.id, list_id: @list.id) %>
-                                <%= link_to("いいね！済み", "/likes/#{@list.id}/destroy", {method: "post"}) %>
-                              <% else %>
-                                <%= link_to("いいね！","/likes/#{@list.id}/create", {method: "post"})%>
-                              <% end %>
-                            </div>
-                          </div>
-
-            </div>
-<div class="list-show-footer">
-    <img src="/あひる.png">
-</div>
+                      </div>
+      <div class="list-show-footer">
+          <img src="/あひる.png">
+        </div>
+    </div>
   </body>

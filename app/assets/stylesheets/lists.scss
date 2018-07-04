@@ -42,8 +42,8 @@
   }
 
   .list-index-item{
+    height: 110px;
     border: groove;
-    height: 100px;
     width: 600px;
     text-align: left;
     padding: 0px 30px;
@@ -114,8 +114,20 @@
 }
 
 .like{
-
 }
+.fa-gratipay{
+  color: pink;
+  font-size: 2em;
+}
+.unlike{
+  color: gray;
+  font-size: 2em;
+}
+
+
+
+
+
 /* ここから投稿編集ページ*/
 .list-edit{
   height: 100vh;
