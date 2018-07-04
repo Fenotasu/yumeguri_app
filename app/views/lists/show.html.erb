@@ -13,9 +13,9 @@
                             </div>
                             <div class="like">
                               <% if Like.find_by(user_id: @current_user.id, list_id: @list.id) %>
-                                いいね！済み
+                                <%= link_to("いいね！済み", "/likes/#{@list.id}/destroy", {method: "post"}) %>
                               <% else %>
-                                いいね！していません
+                                <%= link_to("いいね！","/likes/#{@list.id}/create", {method: "post"})%>
                               <% end %>
                             </div>
                           </div>
