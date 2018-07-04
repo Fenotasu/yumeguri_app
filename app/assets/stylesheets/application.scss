@@ -3,8 +3,6 @@
   *= require_self
   */
   header{
-    display: flex;
-    flex-direction: row-reverse;
     height: 60px;
     width:100vw;
     background-image: url(/木綿.jpg);
@@ -20,22 +18,30 @@
 .logo{
   height:50px;
   width: 50px;
-
 }
 
-  .status{
-    margin-top: 10px;
-    font-size: 2em;
-    margin-right: 70px;
-    color: white;
+  .header-left{
+    float: left;
+      a{font-size: 2em;
+        margin-left: 40px;
+    }
+  }
+  .header-right{
+    padding-top: 5px;
+    width: 80vw;
+    float: right;
+    display: flex;
+    flex-direction: row-reverse;
   }
   .link{
         margin: 10px 15px;
         top:5px;
         height: 25px;
-        width: 90px;
+        width: 100px;
         box-shadow: 5px 5px #04121a;
         padding-top: 8px;
+        padding-left: 8px;
+        padding-right: 8px;
         border-radius: 4px;
         color: white;
         opacity: 0.8;

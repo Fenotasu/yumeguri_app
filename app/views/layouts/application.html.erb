@@ -7,25 +7,31 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <header>
-
-      <%@current_user=User.find_by(id:session[:user_id])%>
-      <%if @current_user%>
-        <a href="/logout" class="link logout icon">ログアウト</a>
-        <a href="/lists/index" class="link index">投稿一覧</a>
-        <a href="/lists/new" class="link new">新規投稿</a>
-        <a href="/users/index" class="link usericon">ユーザ一覧</a>
-        <a href="/" class="link home icon">ホーム</a>
-        <div class="status"><%= link_to(@current_user.name,"/users/#{@current_user.id}") %></div>
-        <img class="logo" src="/logo.png">
-    <%else%>
-
-        <a href="/login" class="link login icon">ログイン</a>
-        <a href="/about" class="link knowhow">使い方</a>
-        <a href="/users/new" class="link signup">新規登録</a>
-        <a href="/" class="link home icon">ホーム</a>
-    <%end%>
+      <div class="header-left">
+          <img class="logo" src="/logo.png">
+                <%if @current_user%>
+                    <%@current_user=User.find_by(id:session[:user_id])%>
+                    <a><%= link_to(@current_user.name,"/users/#{@current_user.id}") %></a>
+                <%end%>
+      </div>
+      <div class="header-right">
+          <%@current_user=User.find_by(id:session[:user_id])%>
+          <%if @current_user%>
+                  <a href="/logout" class="link logout icon">ログアウト</a>
+                  <a href="/lists/index" class="link index">投稿一覧</a>
+                  <a href="/lists/new" class="link new">新規投稿</a>
+                  <a href="/users/index" class="link usericon">ユーザ一覧</a>
+                  <a href="/" class="link home icon">ホーム</a>
+            <%else%>
+                  <a href="/login" class="link login icon">ログイン</a>
+                  <a href="/about" class="link knowhow">使い方</a>
+                  <a href="/users/new" class="link signup">新規登録</a>
+                  <a href="/" class="link home icon">ホーム</a>
+            <%end%>
+       </div>
   </header>
 
   <body>
