@@ -19,7 +19,7 @@ class ListsController < ApplicationController
   def show
     @list= List.find_by(id: params[:id])
     @user=User.find_by(id: @list.user_id)
-    # @user=@list.users
+    @likes_count=Like.where(list_id: @list.id).count
   end
 
 def new
@@ -59,10 +59,6 @@ def destroy
   @list.destroy
   redirect_to("/lists/index")
 end
-
-
-
-
 
 
 

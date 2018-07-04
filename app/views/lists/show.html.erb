@@ -14,13 +14,14 @@
                                     <div class="like">
                                           <% if Like.find_by(user_id: @current_user.id, list_id: @list.id) %>
                                             <%= link_to( "/likes/#{@list.id}/destroy", {method: "post"})do %>
-                                                  <span class="fab fa-gratipay unlike"></span>
-                                                  <%end%>            
+                                                  <span class="fab fa-gratipay "></span>
+                                                  <%end%>
                                           <% else %>
                                             <%= link_to("/likes/#{@list.id}/create", {method: "post"})do%>
-                                             <span class="fab fa-gratipay"></span>
+                                             <span class="fab fa-gratipay unlike"></span>
                                              <%end%>
                                           <% end %>
+                                          <%=@likes_count%>
                                     </div>
                             </div>
                       </div>
