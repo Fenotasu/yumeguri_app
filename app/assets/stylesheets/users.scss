@@ -122,23 +122,66 @@
 .show-container{
   height: 100%;
   width: 100vw;
+  margin: 0 auto;
 }
 .user-show-item{
   font-size: 15px;
 }
-
+.show-lists{
+  border: groove;
+  width: 60%;
+  margin: 0 auto;
+}
 .list-index-item2{
   border: groove;
   height: 50px;
-  width: 600px;
+  width: 60vw;
   text-align: left;
-  padding: 0px 30px;
-  margin-left: 330px;
   padding-bottom: 20px;
   background-color: white;
   font-size: 2em;
-  margin-top: 10px;
   margin-bottom: 10px;
+  margin: 0 auto;
+}
+
+.user-tabs{
+  border: groove;
+  height: 25px;
+  width: 60vw;
+  list-style: none;
+  margin: 0 auto;
+ li{
+   display: inline-block;
+  margin-left: 50px;
+  margin: 0 auto;
+  width: 80px;
+  float: left;
+  cursor: pointer;
+  color: gray;
+}}
+.user_tabs li.active a{
+  color: #57575f;
+}
+
+// ここからユーザーのいいね一覧ページ
+.show-index-item3{
+  border: groove;
+  width: 60vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+}
+.list-right{
+  width: 10vw;
+  img{
+    height: 60px;
+    width: 60px;
+  }
+}
+.list-left li{
+list-style: none;
+text-align: left;
+margin-top: 10px;
 }
 
 /* ここからユーザー編集ページ*/

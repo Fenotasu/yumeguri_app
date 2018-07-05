@@ -3,7 +3,7 @@
         <div class = "list-index-item">
                 <img src="<%="/user_images/#{@user.users_image}"%>">
                       <div class ="list-user-name">
-                        <%= @user.name %>  </div>
+                        <%= link_to(@user.name,"/users/#{@user.id}") %>  </div>
                             <div class="list-user-comment">
                                     <%= @list.comment %>  </div>
                                     <% if @list.user_id==@current_user.id %>

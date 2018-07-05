@@ -4,8 +4,8 @@ class List < ApplicationRecord
   validates :name,{length:{maximum: 20}}
   validates :user_id,{presence: true}
 
-#   def user  インスタンスメソッドを使う目的がわからない
-#     return User.find_by(:id self.user_id)
-#     end
-# end
+
+def user
+  return User.find_by(id: self.user_id)
+end
 end

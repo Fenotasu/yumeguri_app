@@ -1,0 +1,42 @@
+<body class="user-show-body">
+    <div class="user-show-top">
+        <img src="<%="/user_images/#{@user.users_image}"%>">
+
+         <div class="show-container">
+               <h2>    <%= @user.name %>  </h2>
+            <div class = "user-show-name">
+                <p>    <%= @user.email %>  </p>
+            </div>
+            <div class="show-link">
+              <%if @user.id==@current_user.id%>
+                <%= link_to" 編集", "/users/#{@user.id}/edit"%>
+                <%= link_to("削除","/users/#{@user.id}/destroy",{method:"post"})%>
+                <%end%>
+            </div>
+                    <ul class="user-tabs">
+                        <li class="active">
+                          <%= link_to("投稿", "/users/#{@user.id}") %>
+                        </li>
+                        <li>
+                          <%= link_to("いいね!", "/users/#{@user.id}/likes") %>
+                        </li>
+                    </ul>
+
+              <div class="show-lists">
+              <% @likes.each do |like| %>
+              <%list=List.find_by(id: like.list_id)%>
+                    <div class="show-index-item3">
+                        <div class="list-right">
+                            <img src="<%="/user_images/#{list.user.users_image}"%>">
+                        </div>
+                        <div class="list-left">
+                      <li>     <%=link_to(list.user.name,"/users/#{list.user.id}")%></li>
+                      <li>     <%=link_to(list.comment,"/lists/#{list.id}")%></li>
+                        </div>
+                    </div>
+              <%end%>
+            </div>
+            </div>
+          </div>
+         </div>
+  </body>
