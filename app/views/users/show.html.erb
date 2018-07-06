@@ -1,7 +1,27 @@
 <body class="user-show-body">
     <div class="user-show-top">
-        <img src="<%="/user_images/#{@user.users_image}"%>">
 
+<div class="user-flex">
+        <div class="profile-image">
+            <img src="<%="/user_images/#{@user.users_image}"%>">
+        </div>
+        <div class="yu-count">
+          ＜制覇：<%=@onsen_count%>温泉＞
+        </div>
+        <div class="yu-count">
+          <%if  @onsen_count >10%>
+              泉人
+          <% elsif  @onsen_count >8 %>
+              風呂王
+          <% elsif  @onsen_count >6 %>
+              趣味は温泉巡りと言ってよし
+          <% elsif  @onsen_count >=1 %>
+              ただの風呂好き
+          <% else %>
+              着替え中
+          <%end%>
+        </div>
+</div>
          <div class="show-container">
                <h2>    <%= @user.name %>  </h2>
             <div class = "user-show-name">
@@ -14,14 +34,21 @@
                 <%end%>
             </div>
                     <div class="user-tabs">
-                        <li class="active"><%= link_to("投稿", "/users/#{@user.id}") %></li>
+                        <li class="active"><%= link_to("温泉", "/users/#{@user.id}") %></li>
                         <li><%= link_to("いいね!", "/users/#{@user.id}/likes") %></li>
                     </div>
             <div class="show-lists">
+
               <% @user.lists.each do |list| %>
               <div class="list-index-item2">
-              <%=link_to list.comment,"/lists/#{list.id}"%>
-              </div>
+                  <div class= "user-index-left">
+                  <%=link_to list.content,"/lists/#{list.id}"%>
+                  </div>
+                  <div class= "user-index-right">
+                      <%=link_to "HP", @list.url%>
+                      <%=link_to "レビュー", @list.review%>
+                  </div>
+                </div>
               <%end%>
             </div>
           </div>

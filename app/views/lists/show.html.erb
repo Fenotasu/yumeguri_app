@@ -9,8 +9,10 @@
                                     <% if @list.user_id==@current_user.id %>
                                     <div class ="list-edit-link">
                                         <%= link_to" 編集", "/lists/#{@list.id}/edit"%>
-                                        <%= link_to("削除","/lists/#{@list.id}/destroy",{method:"post"})%><%end%>
-                                    </div>
+                                        <%= link_to("削除","/lists/#{@list.id}/destroy",{method:"post"})%>
+                                        </div>
+                                    <%end%>
+
                                     <div class="like">
                                           <% if Like.find_by(user_id: @current_user.id, list_id: @list.id) %>
                                             <%= link_to( "/likes/#{@list.id}/destroy", {method: "post"})do %>

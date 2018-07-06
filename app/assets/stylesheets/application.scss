@@ -1,7 +1,7 @@
  /*
   *= require_tree .
   *= require_self
-  */
+    /* ヘッダー ================================ */
   header{
     height: 60px;
     width:100vw;
@@ -14,7 +14,15 @@
     font-family: Georgia,游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN",HGS明朝E,メイリオ,Meiryo,serif;
   }
 
-  /* ヘッダー ================================ */
+// bodyクラス
+.page{
+    font-family: Georgia,游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN",HGS明朝E,メイリオ,Meiryo,serif;
+    height: 100%;
+    width:100%;
+}
+
+
+
 .logo{
   height:50px;
   width: 50px;
@@ -24,6 +32,7 @@
     float: left;
       a{font-size: 2em;
         margin-left: 20px;
+        color:white;
     }
   }
   .header-right{

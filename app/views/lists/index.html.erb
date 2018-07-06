@@ -10,12 +10,15 @@
           <div class="ichiran">
 
             <% @lists.each do |list| %>
-            <a>  <div class = "list-index-item"></a>
-                <%= link_to list.content,"/lists/#{list.id}" %>
-                <%= link_to"HomePage", list.url,  :target=>["_blank"] %>
-                <%= link_to"レビュー", list.review,  :target=>["_blank"] %>
-              <h2>  <%= link_to list.comment,"/lists/#{list.id}" %> </h2>
-
+              <div class = "list-index-item">
+                  <div class="list-index-item-upper">
+                    <%= link_to list.content,"/lists/#{list.id}" %>
+                    <%= link_to"HP", list.url,  :target=>["_blank"] %>
+                    <%= link_to"レビュー", list.review,  :target=>["_blank"] %>
+                  </div>
+                  <div class="list-comment">
+                  <a>  <%= link_to list.comment,"/lists/#{list.id}" %></a>
+                  </div>
            </div>
             <% end %>
            </div>

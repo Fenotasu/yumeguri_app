@@ -5,14 +5,6 @@
 
 
 
-/* 全体 ================================ */
-.jumbotron{
-  margin: 0;
-  font-family: Georgia,游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN",HGS明朝E,メイリオ,Meiryo,serif;
-}
-
-
-
 /* container ================================ */
 .container{
   width: 100vw;
@@ -23,14 +15,12 @@
   background-position: 10% 0%;
   background-image:url(/温泉写真.jpg);
   background-size: cover;
-}
-
-.container h1{
+h1{
  margin-top: 60px;
  padding-top: 50px;
   opacity: 0.7;
   letter-spacing: 5px;
-}
+}}
 .container p{
   opacity:0.7;
   letter-spacing: 3px;
@@ -42,7 +32,6 @@
    text-align: center;
    width: 220px;
    box-shadow: 5px 5px #04121a;
-
    color:white;
    opacity:0.8;
    display: inline-block;
@@ -60,6 +49,7 @@
    position:relative;
    top:5px;
  }
+
  .signup{
     margin-top: 100px ;
     background-color:#2F4F4F;
@@ -109,6 +99,7 @@
   color:#b72a1f;
 }
 
+
 .txt-content{
   margin-top: 20px;
   margin-left: 10px;
@@ -150,7 +141,7 @@
   font-weight:normal;
 }
 /* about ================================ */
-.about{
+.home-about{
   background-image: url(/絵巻.jpg);
   background-size: cover;
   height: 700px;

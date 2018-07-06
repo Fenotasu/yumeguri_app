@@ -49,7 +49,9 @@
     padding: 0px 30px;
     margin-left: 330px;
     background-color: white;
-  }
+    a{
+      margin-left: 10px;
+}  }
 .list-index-item img{
   height: 70px;
   width: 70px;
@@ -66,16 +68,43 @@
     margin-left: 20px;
   }
 
-
-
-
-.list-user-comment{
-  font-size: 20px;
-  text-align: left;
-  padding-left: 50px;
+.list-index-item-upper {
   margin-top: 10px;
-  margin-left: 20px;
+  a{
+  color:#303030;
+  opacity: 0.8;
+}}
+
+.list-index-item-upper a:active{
+  box-shadow: none;
+  position: relative;
+  top:5px;
+  left: 10px;
 }
+a:hover{
+color: blue;}
+
+
+
+
+.list-comment{
+  height: 80px;
+  padding-top: 20px;
+a{
+  font-size: 1.3em;
+  color:#383838;
+  text-decoration: none;
+}}
+a:hover{
+color: blue;}
+
+// .list-user-comment{
+//   font-size: 20px;
+//   text-align: left;
+//   padding-left: 50px;
+//   margin-top: 10px;
+//   margin-left: 20px;
+// }
 .like{
   color: pink;
   margin-top: 10px;

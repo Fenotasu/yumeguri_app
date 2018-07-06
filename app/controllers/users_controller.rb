@@ -18,7 +18,9 @@ before_action :ensure_correct_user,{only: [:edit, :update]}
   end
 
 def show
-@user=User.find_by(id: params[:id])
+  @user=User.find_by(id: params[:id])
+  @list= List.find_by(id: params[:id])
+  @onsen_count=List.where(user_id: @user.id).count
 end
 
 def new
