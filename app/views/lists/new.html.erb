@@ -1,39 +1,42 @@
 
 
 
-  <body class="lists3">
+  <body class="list-new">
 
-      <div class="lists-onsen-name">
-          <h1>温泉名</h1>
-          <%= form_tag("/lists/create")do %>
-                <div class="form">
-                  <div class="form-body">
-                    <%@list.errors.full_messages.each do |message| %>
-                    <div class="form-error">
-                    <%= message %>
-                    </div>
-                    <%end%>
-                    <textarea name="comment"></textarea>
-                    <input type=submit value="投稿">
-                  </div>
-                 </div>
-           <% end %>
-    </div>
+    <div class="lists-new-top">
 
-    <div class="lists-top3">
-        <h1>新規投稿</h1>
         <%= form_tag("/lists/create")do %>
-              <div class="form">
-                <div class="form-body">
+              <div class="list-new-box">
+                <div class="list-new-form-inbox">
                   <%@list.errors.full_messages.each do |message| %>
                   <div class="form-error">
                   <%= message %>
                   </div>
                   <%end%>
-                  <textarea name="comment"></textarea>
+
+                 <h2>温泉名</h2>
+                      <div class="list-content-box">
+                          <textarea name="content"></textarea>
+                      </div>
+
+                  <h2>コメント</h2>
+                      <div class="list-comment-box">
+                          <textarea name="comment"></textarea>
+                      </div>
+
+                  <h2>URL</h2>
+                        <div class="link-url">
+                          <textarea name="url"></textarea>
+                        </div>
+                  <h2>レビュー</h2>
+                        <div class="link-url">
+                          <textarea name="review"></textarea>
+                        </div>
+                <div class="submit-btn">
                   <input type=submit value="投稿">
                 </div>
-               </div>
+                </div><!-- #list-new-form-inboxの閉じタグ -->
+              </div>　　<!-- #list-new-boxの閉じタグ -->
          <% end %>
   </div>
     </body>

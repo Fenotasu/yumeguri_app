@@ -27,7 +27,7 @@ def new
 end
 
 def create
-  @list=List.new(comment: params[:comment], user_id: @current_user.id)
+  @list=List.new(content: params[:content], comment: params[:comment], url: params[:url], review:params[:review], user_id: @current_user.id, )
 
   if @list.save
   redirect_to("/lists/index")

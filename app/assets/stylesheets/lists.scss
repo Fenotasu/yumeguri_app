@@ -205,54 +205,40 @@ color: blue;}
 
 
 /* ここから新規投稿ページ*/
-.lists3{
+.list-new{
   width: 100vw;
   height: 400px;
   background-color: #f8f3d3;
 }
-.list-onsen-name{
+
+.lists-new-top{
   width: 70vw;
   height: 200px;
   margin-left: 200px;
-}
-
-
-
-.lists-top3{
-  width: 70vw;
-  height: 200px;
-  margin-left: 200px;
-}
-
-.lists-top3 h1{
   margin-top: 100px;
+}
+
+.lists-new-top h2{
   text-align: left;
   opacity: 0.5;
   color: #8899a6;
 }
 
-.form-body textarea{
+.list-new-form-inbox textarea{
 font-size: 20px;
 padding: 10px;
-min-height: 140px;
 border: 1px solid rgb(216, 218, 223);
 width: 40vw;
 }
-.form input[type="submit"]
-{
-position: absolute;
-margin-left: 500px;
-margin-top: 30px;
-box-shadow: 5px 5px #04121a;
-display: block;
-border-radius: 4px;
-color: black;
-opacity: 0.8;
-padding:0  20px;
-height: 30px;
-.form input[type="submit"]:active{
-  box-shadow: none;
-  position: relative;
-  top:5px;
-  left: 10px;
-}}
+.list-content-box textarea{
+  height: 30px;}
+.list-comment-box textarea{
+  height: 60px;
+}
+.link-url textarea{
+  height: 10px;
+}
+.submit-btn{
+  margin-top: 30px;
+  text-align: center;
+}
