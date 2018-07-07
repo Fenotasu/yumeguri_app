@@ -14,8 +14,8 @@
             <% @lists.each do |list| %>
               <div class = "list-index-item">
                   <div class="list-index-item-upper">
-                    <%= link_to list.content,"/lists/#{list.id}" %>
-                    <%= link_to"HP", list.url,  :target=>["_blank"] %>
+                    <%= link_to list.user.users_image, "/lists/#{list.id}" %>
+                    <%= link_to list.content, list.url,  :target=>["_blank"] %>
                     <%= link_to"レビュー", list.review,  :target=>["_blank"] %>
                   </div>
                   <div class="list-comment">

@@ -1,4 +1,6 @@
 class List < ApplicationRecord
+belongs_to :user
+
   validates :comment,{presence: true}
   validates :comment, {length:{maximum: 140}}
   validates :name,{length:{maximum: 20}}

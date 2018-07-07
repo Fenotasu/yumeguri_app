@@ -16,6 +16,8 @@ class ListsController < ApplicationController
     @lists=List.all.order(created_at: :desc)
   end
 
+
+
   def show
     @list= List.find_by(id: params[:id])
     @user=User.find_by(id: @list.user_id)
@@ -24,6 +26,7 @@ class ListsController < ApplicationController
 
 def new
   @list=List.new
+  @user=User.new
 end
 
 def create
