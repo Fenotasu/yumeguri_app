@@ -1,34 +1,44 @@
+
+<!-- 投稿詳細画面 -->
 <body class="list-show">
     <div class="list-index-container">
-        <div class = "list-index-item">
-                <img src="<%="/user_images/#{@user.users_image}"%>">
-                      <div class ="list-user-name">
-                        <%= link_to(@user.name,"/users/#{@user.id}") %>  </div>
-                            <div class="list-user-comment">
-                                    <%= @list.comment %>  </div>
-                                    <% if @list.user_id==@current_user.id %>
-                                    <div class ="list-edit-link">
-                                        <%= link_to" 編集", "/lists/#{@list.id}/edit"%>
-                                        <%= link_to("削除","/lists/#{@list.id}/destroy",{method:"post"})%>
-                                        </div>
-                                    <%end%>
+        <div class = "list-show-box">
 
-                                    <div class="like">
-                                          <% if Like.find_by(user_id: @current_user.id, list_id: @list.id) %>
-                                            <%= link_to( "/likes/#{@list.id}/destroy", {method: "post"})do %>
-                                                  <span class="fab fa-gratipay "></span>
-                                                  <%end%>
-                                          <% else %>
-                                            <%= link_to("/likes/#{@list.id}/create", {method: "post"})do%>
-                                             <span class="fab fa-gratipay unlike"></span>
-                                             <%end%>
-                                          <% end %>
-                                          <%=@likes_count%>
-                                    </div>
-                            </div>
-                      </div>
+                <!-- 投稿者アイコン表示 -->
+                <img src="<%="/user_images/#{@user.users_image}"%>">
+                <!-- 投稿者名表示 -->
+                <div class ="list-user-name">
+                  <%= link_to(@user.name,"/users/#{@user.id}") %>
+                </div>
+
+                <!-- 投稿コメントを表示 -->
+                <div class="list-user-comment">
+                        <%= @list.comment %>
+                </div>
+
+　　　　　<!--  自分の投稿の場合は編集アイコンを表示-->
+                <% if @list.user_id==@current_user.id %>
+                <div class ="list-edit-link">
+                    <%= link_to" 編集", "/lists/#{@list.id}/edit"%>
+                    <%= link_to("削除","/lists/#{@list.id}/destroy",{method:"post"})%>
+                </div>
+                <%end%>
+                  <!-- いいねがあるときはハート点灯と数をカウント -->
+                <div class="like">
+                      <% if Like.find_by(user_id: @current_user.id, list_id: @list.id) %>
+                          <%= link_to( "/likes/#{@list.id}/destroy", {method: "post"})do %>
+                                <span class="fab fa-gratipay "></span>
+                          <%end%>
+                      <% else %>
+                         <%= link_to("/likes/#{@list.id}/create", {method: "post"})do%>
+                               <span class="fab fa-gratipay unlike"></span>
+                         <%end%>
+                      <% end %>
+                      <%=@likes_count%>
+                  </div><!-- likeの閉じタグ -->
+        </div><!-- list-index-itemの閉じタグ -->
+　</div><!-- list-index-containerの閉じタグ -->
       <div class="list-show-footer">
           <img src="/あひる.png">
-        </div>
-    </div>
+      </div>
   </body>

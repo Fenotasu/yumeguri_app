@@ -113,43 +113,71 @@ color: blue;}
 }
 
 /* ここからユーザー詳細ページ*/
-.user-show-body{
-  width: 100vw;
-  height:100vw;
-}
+
 .user-show-top{
       margin-top: 200px;
       text-align: center;
       width: 100vw;
+      img{
+        height: 100px;
+        width: 100px;
+      }
 }
-.user-flex{
+.user_image-yucount-rank{
   display: flex;
   margin: 0 auto;
   width: 60vw;
 }
-.user-flex img{
-  height: 100px;
-  width: 100px;
-}
+
 .yu-count{
   margin: auto;
   font-size: 2em;
 }
-
+.yu-level{
+  margin: auto;
+  font-size: 2em;
+  color:#e3be0d;
+}
+//ここからユーザー詳細の行った温泉一覧
 .show-container{
   height: 100%;
   width: 100vw;
   margin: 0 auto;
-}
-.user-show-item{
-  font-size: 15px;
-}
-.show-lists{
-  border: groove;
+a:hover{
+    color: blue;
+}}
+
+.user-edit-destroy{
   width: 60%;
   margin: 0 auto;
-}
-.list-index-item2{
+ a{
+    color:gray;
+    text-decoration: none;
+    margin:0 10px;
+    text-align: center;
+}}
+
+.user-tabs{
+  border: groove;
+  height: 25px;
+  width: 60vw;
+  list-style: none;
+  margin: 0 auto;
+ a{
+   display: inline-block;
+  margin-left: 50px;
+  margin: 0 auto;
+  width: 80px;
+  float: left;
+  cursor: pointer;
+  color: gray;
+  display: inline-block;
+}}
+.user_tabs a:hover{
+color: blue;}
+
+
+.onsen-item{
   border: groove;
   height: 50px;
   width: 60vw;
@@ -159,57 +187,74 @@ color: blue;}
   margin-bottom: 10px;
   margin: 0 auto;
   display: flex;
-}
+   a{
+    margin-bottom: 1px;
+    display: inline-block;
+    text-decoration: none;
+    color:#303030;
+    text-decoration: none;
+  :hover{
+  color: blue;}  }}
 
-.user-tabs{
-  border: groove;
-  height: 25px;
-  width: 60vw;
-  list-style: none;
-  margin: 0 auto;
- li{
-   display: inline-block;
-  margin-left: 50px;
-  margin: 0 auto;
-  width: 80px;
-  float: left;
-  cursor: pointer;
-  color: gray;
-}}
-.user_tabs li.active a{
-  color: #57575f;
-}
-
-.user-index-right{
+.onsen-item-right{
   height: 20px;
   opacity: 0.8;
   color: gray;
   width: 100px;
   margin-left: auto;
 }
-.user-index-left{
+.onsen-item-left{
   font-size: 2em;
 }
 // ここからユーザーのいいね一覧ページ
-.show-index-item3{
+
+.list-edit-link a{
+  color:#303030;
+  opacity: 0.8;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+.like-item{
   border: groove;
   width: 60vw;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
 }
-.list-right{
+.like-item-left{
   width: 10vw;
   img{
     height: 60px;
     width: 60px;
   }
 }
-.list-left li{
+
+
+.like-item-right {
+  text-align: left;
+  a{
 list-style: none;
-text-align: left;
 margin-top: 10px;
+text-decoration: none;
+}}
+
+
+.list-user_comment a{
+  text-decoration: none;
+  color:#303030;
+  display: inline-block;
+  margin-bottom: 1px;
+  font-size: 1.5em;
 }
+
+  .list-user_comment a  :hover{
+      color: blue;
+    }
+
+
+
 
 /* ここからユーザー編集ページ*/
 .user-edit-body{

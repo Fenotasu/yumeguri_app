@@ -127,12 +127,6 @@ color: blue;}
 .list-show{
   height: 100vh;
   position: absolute;
-}
-
-.list-index-container{
-  margin-top: 200px;
-  height: 500px;
-}
 .list-show-footer{
   width: 100vw;
   height: 50px;
@@ -140,7 +134,31 @@ color: blue;}
   position: relative;
   bottom: 0;
   margin-top: 300px;
+}}
+
+.list-index-container{
+  margin-top: 200px;
+  height: 500px;
 }
+
+.list-show-box{
+  height: 130px;
+  border: groove;
+  width: 600px;
+  text-align: left;
+  padding: 0px 30px;
+  margin-left: 330px;
+  background-color: white;
+  a{
+    margin-left: 10px;
+}  }
+
+.list-show-box img{
+  height: 70px;
+  width: 70px;
+  float: left;
+}
+
 
 .like{
 }
@@ -152,7 +170,10 @@ color: blue;}
   color: gray;
   font-size: 2em;
 }
-
+.list-user-comment{
+  margin-top: 10px;
+  font-size: 1.3em;
+}
 
 
 

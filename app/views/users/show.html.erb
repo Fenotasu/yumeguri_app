@@ -1,56 +1,58 @@
-<body class="user-show-body">
-    <div class="user-show-top">
+<!--  ユーザー詳細ページ--投稿を表示-->
+<div class="user-show-top">
+      <div class="user_image-yucount-rank">
+            <div class="profile-image">
+                <img src="<%="/user_images/#{@user.users_image}"%>">
+            </div>
+            <div class="yu-count">
+              ＜制覇：<%=@onsen_count%>温泉＞
+            </div>
+            <!-- 行った温泉の数に合わせて表示変更 -->
+            <div class="yu-level">
+                  <%if  @onsen_count >10%>
+                      泉人
+                  <% elsif  @onsen_count >8 %>
+                      風呂王
+                  <% elsif  @onsen_count >6 %>
+                      趣味は温泉巡りと言ってよし
+                  <% elsif  @onsen_count >=1 %>
+                      ただの風呂好き
+                  <% else %>
+                      着替え中
+                  <%end%>
+            </div>
+      </div>  <!-- user_image-yucount-rankの閉じタグ -->
 
-<div class="user-flex">
-        <div class="profile-image">
-            <img src="<%="/user_images/#{@user.users_image}"%>">
-        </div>
-        <div class="yu-count">
-          ＜制覇：<%=@onsen_count%>温泉＞
-        </div>
-        <div class="yu-count">
-          <%if  @onsen_count >10%>
-              泉人
-          <% elsif  @onsen_count >8 %>
-              風呂王
-          <% elsif  @onsen_count >6 %>
-              趣味は温泉巡りと言ってよし
-          <% elsif  @onsen_count >=1 %>
-              ただの風呂好き
-          <% else %>
-              着替え中
-          <%end%>
-        </div>
-</div>
+
+
          <div class="show-container">
                <h2>    <%= @user.name %>  </h2>
             <div class = "user-show-name">
                 <p>    <%= @user.email %>  </p>
             </div>
-            <div class="show-link">
-              <%if @user.id==@current_user.id%>
-                <%= link_to" 編集", "/users/#{@user.id}/edit"%>
-                <%= link_to("削除","/users/#{@user.id}/destroy",{method:"post"})%>
-                <%end%>
+            <div class="user-edit-destroy">
+                    <%if @user.id==@current_user.id%>
+                    <a>  <%= link_to" 編集", "/users/#{@user.id}/edit"%></a>
+                    <a>  <%= link_to("削除","/users/#{@user.id}/destroy",{method:"post"})%></a>
+                    <%end%>
             </div>
-                    <div class="user-tabs">
-                        <li class="active"><%= link_to("温泉", "/users/#{@user.id}") %></li>
-                        <li><%= link_to("いいね!", "/users/#{@user.id}/likes") %></li>
-                    </div>
-            <div class="show-lists">
+            <div class="user-tabs">
+                    <a><%= link_to("温泉", "/users/#{@user.id}") %></a>
+                    <a><%= link_to("いいね!", "/users/#{@user.id}/likes") %></a>
+            </div>
 
-              <% @user.lists.each do |list| %>
-              <div class="list-index-item2">
-                  <div class= "user-index-left">
-                  <%=link_to list.content,"/lists/#{list.id}"%>
-                  </div>
-                  <div class= "user-index-right">
-                      <%=link_to "HP", @list.url%>
-                      <%=link_to "レビュー", @list.review%>
-                  </div>
-                </div>
-              <%end%>
+            <div class="user-onsen-lists">
+                  <% @user.lists.each do |list| %>
+                      <div class="onsen-item">
+                            <div class= "onsen-item-left">
+                            <%=link_to list.content,"/lists/#{list.id}"%>
+                            </div>
+                            <div class= "onsen-item-right">
+                                <%=link_to "HP", @list.url%>
+                                <%=link_to "レビュー", @list.review%>
+                            </div>
+                    </div>
+                  <%end%>
             </div>
-          </div>
-         </div>
-  </body>
+          </div>  　<!-- show-containerの閉じタグ -->
+  </div>  <!-- user-show-topの閉じタグ -->
