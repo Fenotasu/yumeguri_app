@@ -3,23 +3,38 @@
 
   <body class="lists3">
 
-      <div class="lists-top3">
-      <h1>新規投稿</h1>
-
-
-      <%= form_tag("/lists/create")do %>
-          <div class="form">
-            <div class="form-body">
-              <%@list.errors.full_messages.each do |message| %>
-              <div class="form-error">
-              <%= message %>
-              </div>
-              <%end%>
-              <textarea name="comment"></textarea>
-              <input type=submit value="投稿">
-            </div>
-           </div>
+      <div class="lists-onsen-name">
+          <h1>温泉名</h1>
+          <%= form_tag("/lists/create")do %>
+                <div class="form">
+                  <div class="form-body">
+                    <%@list.errors.full_messages.each do |message| %>
+                    <div class="form-error">
+                    <%= message %>
+                    </div>
+                    <%end%>
+                    <textarea name="comment"></textarea>
+                    <input type=submit value="投稿">
+                  </div>
+                 </div>
            <% end %>
-         </div>
+    </div>
+
+    <div class="lists-top3">
+        <h1>新規投稿</h1>
+        <%= form_tag("/lists/create")do %>
+              <div class="form">
+                <div class="form-body">
+                  <%@list.errors.full_messages.each do |message| %>
+                  <div class="form-error">
+                  <%= message %>
+                  </div>
+                  <%end%>
+                  <textarea name="comment"></textarea>
+                  <input type=submit value="投稿">
+                </div>
+               </div>
+         <% end %>
+  </div>
     </body>
   </div>
