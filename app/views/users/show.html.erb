@@ -48,8 +48,8 @@
                             <%=link_to list.content,"/lists/#{list.id}"%>
                             </div>
                             <div class= "onsen-item-right">
-                                <%=link_to "HP", @list.url%>
-                                <%=link_to "レビュー", @list.review%>
+                                <%=link_to "HP", list.url, :target=>["_blank"] %>
+                                <%=link_to "レビュー", list.review,:target=>["_blank"] %>
                             </div>
                     </div>
                   <%end%>
