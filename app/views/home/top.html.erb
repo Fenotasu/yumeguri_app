@@ -1,5 +1,7 @@
 
 
+
+
   <body class="page">
       <div class="container">
         <h1>YUMEGURI~湯めぐり~</h1>
@@ -7,7 +9,7 @@
 
 
         <div class="btn-wrapper">
-          <a href="#" div class="btn signup">
+          <a href="/users/new" div class="btn signup">
             <i class="fas fa-registered"></i>
             新規登録はこちら</a>
 
@@ -76,10 +78,10 @@
 
 
         <div class="lowcontainer">
-          <h2>あなたは過去にいくつの温泉を巡ってきましたか</h2>
-          <h3>温泉と共にある思い出の旅に出かけよう</h3>
+          <h2 id='call'>あなたは過去にいくつの温泉を巡ってきましたか</h2>
+          <h3 id='start'>温泉と共にある思い出の旅に出かけよう</h3>
         </div>
-        <span class="btn yumeguri_note">湯めぐり帳をつくる</span>
+        <span class="btn yumeguri_note"><a><%=link_to("湯めぐり帳をつくる","/users/new")%></a></span>
       </div>
     </div>
     <footer class="footer">

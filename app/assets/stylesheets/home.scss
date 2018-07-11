@@ -119,6 +119,13 @@ h1{
   font-family: Georgia,游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN",HGS明朝E,メイリオ,Meiryo,serif;
   text-align: center;
 }
+
+#call{
+  display: none;
+}
+#start{
+  display: none;
+}
 .yumeguri_note{
   margin-bottom: 100px;
   display: block;
@@ -128,7 +135,13 @@ h1{
   background-color: #dcce74;
   color: black;
 }
-
+.yumeguri_note a{
+  color: gray;
+  text-decoration: none;
+}
+.yumeguri_note a:hover{
+  color: black
+}
 
 
 
