@@ -46,3 +46,9 @@ $(function() {
       $('#start').fadeOut()
   });
 });
+//
+// $(function(){
+//     $('#login').click(function(){
+//       $('#login-modal').fadeIn()
+//     });
+// });
