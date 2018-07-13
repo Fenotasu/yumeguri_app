@@ -20,11 +20,13 @@ h1{
  padding-top: 50px;
   opacity: 0.7;
   letter-spacing: 5px;
+  display: none;
 }}
 .container p{
   opacity:0.7;
   letter-spacing: 3px;
   margin: 30px 0 10px 40px;
+  display: none;
   }
 
 
@@ -101,6 +103,7 @@ h1{
 .trend img{
   max-width: 100%;
   max-height: 100%;
+  display: none;
 }
 
 .txt-content{
@@ -109,6 +112,7 @@ h1{
   font-size: 12px;
   width: 90%;
   text-align: left;
+  display: none;
 }
 
 /* low_container================================ */

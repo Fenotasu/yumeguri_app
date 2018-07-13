@@ -17,8 +17,32 @@
 //= require_tree .
 $(function() {
 
-  $('img').fadeIn('slow');
+  $('#top-title').fadeIn(5000);
+  $('#message').fadeIn(5000);
+  $('.trend').find('img').fadeIn(5000);
+
+ $('.txt-content').fadeIn(11000);
   // $('p').slideUp(1500);
   $('#call').fadeIn(5000)
-  $('#start').fadeIn(7000)
+  // $('#start').fadeIn(7000)
+});
+
+
+// $(function(){
+//   $('#yu-note').hover(
+//   function(){
+//     $('#start').fadeIn()
+//   },function(){
+//     $('#start').fadeOut()
+//   });
+// });
+//
+$(function() {
+  $('.yumeguri_note').hover(
+  function() {
+    $('#start').fadeIn()
+  },
+  function() {
+      $('#start').fadeOut()
+  });
 });
