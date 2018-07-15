@@ -15,10 +15,10 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-$(function() {
 
-  $('#top-title').fadeIn(5000);
-  $('#message').fadeIn(5000);
+  $(document).on('turbolinks:load', function() {
+  $('#top-title').fadeTo("slow", 1);
+  $('#message').fadeTo("slow", 1);
   $('.trend').find('img').fadeIn(5000);
 
  $('.txt-content').fadeIn(11000);
