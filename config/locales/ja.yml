@@ -6,6 +6,8 @@ ja:
     attributes:
       user:
         name: "氏名"
+        email: "アドレス"
+        password: "パスワード"
     errors:
       messages:
         record_invalid: "バリデーションに失敗しました: %{errors}"

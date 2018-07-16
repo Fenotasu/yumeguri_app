@@ -79,11 +79,12 @@ def destroy
 end
 
 def login_form
+  @user=User.new
 end
 
 def login
-  @user=User.find_by(email: params[:email])
-if @user && @user.authenticate(params[:password])
+  @user=User.find_by(email: params[:user][:email])
+if @user && @user.authenticate(params[:user][:password])
   session[:user_id]=@user.id
   flash[:notice] = "ログインしました"
   redirect_to("/lists/index")
@@ -92,7 +93,7 @@ else
 
   @email= params[:email]
   @password=params[:password]
-
+  @user=User.new
   render("users/login_form")
 end
 

@@ -4,6 +4,8 @@ class ListsController < ApplicationController
 
  before_action :ensure_correct_user,{only: [:edit, :update, :destroy] }
 
+
+
  def ensure_correct_user
    @list=List.find_by(id: params[:id])
    if @list.user_id !=@current_user.id
@@ -30,7 +32,12 @@ def new
 end
 
 def create
-  @list=List.new(content: params[:content], comment: params[:comment], url: params[:url], review:params[:review], user_id: @current_user.id, )
+  @list=List.new(
+    content: params[:content],
+    comment: params[:comment],
+    url: params[:url],
+    review: params[:review],
+    user_id: @current_user.id)
 
   if @list.save
   redirect_to("/lists/index")

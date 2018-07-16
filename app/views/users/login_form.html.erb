@@ -24,6 +24,18 @@
           <div class="login-button">
           <input type="submit" value="ログイン"></div>
         <% end %>
+
+
+<%= form_for @user, :url => {:action => 'login' } do |f| %>
+
+ <%= f.label :email %><%= f.text_field :email %>
+<%= f.label :password %><%= f.password_field :password %>
+<%= f.submit %>
+<% end %>
+
+
+
+
       </div>
     </div>
   </div>
