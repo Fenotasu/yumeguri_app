@@ -15,7 +15,7 @@
               <div class = "list-index-item">
                   <div class="list-index-item-upper">
                     <%= link_to list.user_id, "/lists/#{list.id}" %>
-                    <%= link_to list.content, list.url,  :target=>["_blank"] %>
+                    <%= link_to list.name, list.url,  :target=>["_blank"] %>
                     <%= link_to"レビュー", list.review,  :target=>["_blank"] %>
                   </div>
                   <div class="list-comment">
