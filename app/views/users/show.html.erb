@@ -45,7 +45,7 @@
                   <% @user.lists.each do |list| %>
                       <div class="onsen-item">
                             <div class= "onsen-item-left">
-                            <%=link_to list.content,"/lists/#{list.id}"%>
+                            <%=link_to list.name,"/lists/#{list.id}"%>
                             </div>
                             <div class= "onsen-item-right">
                                 <%=link_to "HP", list.url, :target=>["_blank"] %>
