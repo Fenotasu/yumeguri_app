@@ -46,54 +46,22 @@
           <a>この時期、オススメの宿</a>
           </div>
 
-            <div class="trend">
-
-            <a href="http://arimaspa-kingin.jp/cont01/cont01-flm.htm" target="_blank">  </a>
-                <img src="/有馬温泉.jpg"  id="id1"　>
-
-                  <a>有馬温泉</a>
-                  <div class="txt-content">新緑の六甲山の中、トンネルを抜けると…<br>そこは千と千尋の世界のような温泉街<br>炭酸せんべいに温泉饅頭、秀吉が愛した温泉街の町歩きも楽しもう
-                  </div>
-                </div>
+        <%  onsen_urls=["http://arimaspa-kingin.jp/cont01/cont01-flm.htm" , "http://www.suzurann.jp/", "https://www.iyaonsen.co.jp/", "http://renaissance-naruto.com/"]%><%
+          onsen_images=["/有馬温泉.jpg", "/すずらんのゆ.jpg", "/祖谷温泉.jpg", "/なると.jpg" ]
+          onsen_names=["有馬温泉","すずらんの湯", "祖谷温泉", "ルネッサンス鳴門"]
+          onsen_comments=["新緑の六甲山の中、トンネルを抜けると…\n\nそこは千と千尋の世界のような温泉街。\n\n炭酸せんべいに温泉饅頭。\n\n秀吉が愛した温泉街の町歩きも楽しもう", "老舗旅館のような風情溢れる景観。\n\n少し足を延ばせば、街の喧騒を忘れ静かな時間をゆったりとお湯に浸かりながら過ごせそう。", "四国一の絶景露天風呂\n\n近くにはかづら橋に、香川のうどんと観光にも困らない、四国旅行の際はぜひ泊まりたい宿", "瀬戸内海を臨むリゾート露天風呂\n\nおしゃれな庭の造りの中、海を眺めているとアジアの高級スパにでもきているような錯覚に陥る。アクティビティも豊富なホテルリゾートなので家族でくると面白い。お風呂は平日の朝が空いていてオススメ"] %>
 
 
+          <% for i in 0..3 do %>
+          <div class="trend">
+              <%= link_to onsen_urls[i], target: "_blank" do %>
+                <%= image_tag onsen_images[i]  %>
+              <% end %>
+                <%=onsen_names[i]%>
+          <div class="onsen-comment">    <%= simple_format(h(onsen_comments[i] ))%></div>
+          </div>
+          <%end%>
 
-            <div class="trend">
-
-                <a href="http://www.suzurann.jp/" target="_blank">
-                <img src="/すずらんのゆ.jpg"  id="id2">
-
-                <a>すずらんの湯</a>
-                  <div class="txt-content">スーパー銭湯とは思えない風情溢れる景観。<br>少し足を延ばせば、街の喧騒を忘れ静かな時間をゆったりとお湯に浸かりながら過ごせそう。
-                  </div>
-                </a>
-              </div>
-
-
-
-            <div class="trend">
-
-                <a href="https://www.iyaonsen.co.jp/" target="_blank">
-                <img  src="/祖谷温泉.jpg"  id="id3"  >
-
-                <a>祖谷温泉</a>
-                <div class="txt-content">四国一の絶景露天風呂<br>周りは、日本昔話の世界。近くにはかづら橋、香川のうどんなど観光にも困らない、四国旅行の際はぜひ泊まりたい宿
-
-              </a>
-              </div>
-            </div>
-
-
-            <div class="trend">
-
-                <a href="http://renaissance-naruto.com/" target="_blank">
-                <img src="/なると.jpg"  id="id4">
-            
-                <a>ルネッサンスリゾート鳴門</a>
-                <div class="txt-content">瀬戸内海を臨むリゾート露天風呂<br>おしゃれな庭の造りの中、海を眺めているとアジアの高級スパにでもきているような錯覚に陥る。アクティビティも豊富なホテルリゾートなので家族でくると面白い。お風呂は平日の朝が空いていてオススメ
-                </div>
-              </a>
-            </div>
 
 
 
