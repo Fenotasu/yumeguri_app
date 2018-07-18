@@ -39,39 +39,49 @@
   background-color: #f8f3d3;
 
   }
+  @media screen and (min-width:480px) {
+      .list-index-item{
+        height: 20%;
+        border: groove;
+        width: 90%;
+        font-size: 2em;
+        text-align: left;
+        padding: 0px 30px;
+        margin: 0 auto;
+        background-color: white;
+        position:relative;
+      }
+      .list-comment{
+        margin: 0 auto ;
+        position:absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }    /*　for iPhone Landscape　(iPhone 横)　*/
 
+
+  @media screen and (min-width:768px) and ( max-width:1024px) {
+      /*　for iPad 　*/
+        .list-index-item{
+          width: 70%;
+}}
+  @media screen and (min-width:1024px) {
+      /*　for PC　*/
   .list-index-item{
-    height: 110px;
-    border: groove;
-    width: 600px;
-    text-align: left;
-    padding: 0px 30px;
-    margin: 0 auto;
-    background-color: white;
-    a{
-      margin-left: 10px;
-}  }
+    height: 20%;
+    width: 80%;
+    font-size: 1.3em;
+ }}
+
+
+
 .list-index-item img{
   height: 70px;
   width: 70px;
   float: left;
 }
 
-@media screen and (min-width: 768px) {
-  .list-index-item{
-    height: 20%;
-    border: groove;
-    width: 90%;
-    font-size: 2em;
-    position:relative;
-  }
-  .list-comment{
-    margin: 0 auto ;
-    position:absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
+
 
 .list-user-name{
   color: green;
@@ -103,7 +113,7 @@ color: blue;}
 
 
 .list-comment{
-  height: 80px;
+  height: 10px;
   padding-top: 20px;
 a{
   font-size: 1.3em;
