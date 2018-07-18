@@ -17,7 +17,7 @@
   min-height: 200px;
   height: 100vh;
   background-color: #f8f3d3;
-  position: absolute;
+  position: absolute;}
 
 
   /* ここからfooter*/
@@ -26,7 +26,7 @@
     background-image: url(/木綿２.jpg);
     height: 100px;
     width: auto;
-  }}
+  }
 
 
 
@@ -54,7 +54,7 @@
     width: 600px;
     text-align: left;
     padding: 0px 30px;
-    margin-left: 330px;
+    margin: 0 auto;
     padding-bottom: 50px;
     background-color: white;
     margin-bottom: 10px;
@@ -352,6 +352,15 @@ height: 30px;
   margin-top: 30px;
 }
 
+
+
+
+
+
+
+
+
+
 /* ここからログインページ*/
 .login-flash{
   background-color: pink;
@@ -381,4 +390,21 @@ height: 30px;
 }
 .login-button{
   margin-top: 50px;
+}
+
+.input-login{
+  text-align: center;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.input-email, .input-pw{
+  padding-bottom: 30px;
+  text-align: right;
+}
+
+
+
+.register-button{
+  text-align: right;
 }

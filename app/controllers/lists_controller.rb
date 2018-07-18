@@ -1,6 +1,6 @@
 class ListsController < ApplicationController
 
-  before_action :authenticate_user, {only: [:index, :show, :edit, :update]}
+  before_action :authenticate_user, {only: [ :edit, :update]}
 
  before_action :ensure_correct_user,{only: [:edit, :update, :destroy] }
 
@@ -33,7 +33,7 @@ end
 
 def create
   @list=List.new(
-    content: params[:content],
+    name: params[:name],
     comment: params[:comment],
     url: params[:url],
     review: params[:review],

@@ -16,23 +16,16 @@
         </div>
         <%end%>
 
-        <%= form_tag("/login") do %>
-        <p>メールアドレス</p>
-        <input name="email" value="<%= @email %>">
-        <p>パスワード</p>
-          <input type="password" name="password" value="<%=@password%>">
-          <div class="login-button">
-          <input type="submit" value="ログイン"></div>
-        <% end %>
 
 
 <%= form_for @user, :url => {:action => 'login' } do |f| %>
 
- <%= f.label :email %><%= f.text_field :email %>
-<%= f.label :password %><%= f.password_field :password %>
-<%= f.submit %>
-<% end %>
-
+<div class= "input-login">
+     <div class="input-email"><%= f.label :email %><%= f.text_field :email %></div>
+     <div class="input-pw"><%= f.label :password %><%= f.password_field :password %></div>
+     <div class="register-button"><%= f.submit :登録 %></div>
+    <% end %>
+</diiv>
 
 
 

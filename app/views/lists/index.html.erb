@@ -14,7 +14,10 @@
             <% @lists.each do |list| %>
               <div class = "list-index-item">
                   <div class="list-index-item-upper">
-                    <%= link_to list.user_id, "/lists/#{list.id}" %>
+                    <%user=User.find_by(id:list.user_id)%>
+                    <%= link_to user.name, "/users/
+
+                    #{user.id}" %>
                     <%= link_to list.name, list.url,  :target=>["_blank"] %>
                     <%= link_to"レビュー", list.review,  :target=>["_blank"] %>
                   </div>
