@@ -85,6 +85,7 @@ end
 def login
   @user=User.find_by(email: params[:user][:email])
 if @user && @user.authenticate(params[:user][:password])
+  logger.debug(@user.inspect)
   session[:user_id]=@user.id
   flash[:notice] = "ログインしました"
   redirect_to("/lists/index")
