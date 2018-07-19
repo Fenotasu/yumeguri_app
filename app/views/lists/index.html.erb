@@ -18,7 +18,11 @@
                     <%= link_to user.name, "/users/
 
                     #{user.id}" %>
-                    <%= link_to list.name, list.url,  :target=>["_blank"] %>
+                    <%if list.url.nil? then%>
+                      <%= list.name   %>
+                      <%else%>
+                      <%= link_to list.name, list.url,  :target=>["_blank"] %>
+                      <%end%>
                     <%= link_to"レビュー", list.review,  :target=>["_blank"] %>
                   </div>
                   <div class="list-comment">
