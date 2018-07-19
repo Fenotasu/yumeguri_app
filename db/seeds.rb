@@ -12,7 +12,7 @@ User.create(:name=>"央", :email=>"aaa@gmail.com", :password=>"aaa", :id=>1, :us
 User.create(:name=>"yuyusuke", :email=>"yuyu@gmail.com", :password=>"yusuke", :id=>2, :users_image=>"2.jpg")
 User.create(:name=>"Miu", :email=>"miyuyu@gmail.com", :password=>"miyu", :id=>3, :users_image=>"3.jpg")
 User.create(:name=>"Acchi", :email=>"acchi@gmail.com", :password=>"bb", :id=>4, :users_image=>"4.jpg")
-
+User.create(:name=>"admin", :email=>"admin", :password=>"admin", :id=>5, :users_image=>"5.jpg")
 
 
 List.create(:name=>"一の湯", :comment=>"夏のお祭りの日は無料で入れた！", :url=>"http://www.kinsui.net/kinosaki/sotoyu/ichinoyu.html", :review=>"https://www.google.co.jp/maps/place/%E4%B8%80%E3%81%AE%E6%B9%AF/@35.6261871,134.8089599,19z/data=!3m1!4b1!4m7!3m6!1s0x5fffc8307b8b3f1b:0x4e52098779821189!8m2!3d35.6261861!4d134.8095068!9m1!1b1", :user_id=>1)
