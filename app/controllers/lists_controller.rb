@@ -1,9 +1,19 @@
 class ListsController < ApplicationController
 
-  before_action :authenticate_user, {only: [ :edit, :update]}
+  # before_action :set_current_user, {only: [:show]}
 
- before_action :ensure_correct_user,{only: [:edit, :update, :destroy] }
+  before_action :authenticate_user, {only: [ :show, :edit, :update]}
 
+  before_action :ensure_correct_user,{only: [:edit, :update, :destroy] }
+
+  # def set_current_user
+  #   if @current_user.id==nil then
+  #     flash[:notice]="権限がありません"
+  #     redirect_to("/lists/index")
+  #   else
+  #     redirect_to("/lists/")
+  #   end
+  # end
 
 
  def ensure_correct_user
@@ -54,6 +64,7 @@ end
 def update
   @list=List.find_by(id: params[:id])
   @list.comment=params[:comment]
+  @list.comment.gsub(" ", "")
 
    if
    @list.save

@@ -7,11 +7,9 @@
 <h2>コメントの編集</h2>
 <%= form_tag("/lists/#{@list.id}/update")do %>
             <div class = "list-show-item">
-
-                <textarea name="comment">
-                  <%= @list.comment %>  </textarea>
+                <textarea name="comment"><%= @list.comment %></textarea>
                 <input type="submit" value="保存">
-                </div>
+            </div>
 <%end%>
 
   </body>
