@@ -24,6 +24,7 @@ Rails.application.routes.draw do
 
   get 'lists/index'
   get "lists/new"=>"lists#new"
+  get "lists/new"=>"lists#new_onsen"
   get"lists/:id" => "lists#show"
   post "lists/create"=>"lists#create"
   get"lists/:id/edit"=>"lists#edit"
