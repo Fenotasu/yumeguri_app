@@ -1,6 +1,5 @@
 class ListsController < ApplicationController
 
-  # before_action :set_current_user, {only: [:show]}
 
   before_action :authenticate_user, {only: [ :show, :edit, :update]}
 
@@ -14,6 +13,12 @@ class ListsController < ApplicationController
   #     redirect_to("/lists/")
   #   end
   # end
+
+  logger.debug("[debug] lists#create")
+  logger.info("[info] lists#create")
+  logger.warn("[warn] lists#create")
+  logger.error("[error] lists#create")
+  logger.fatal("[fatal] lists#create")
 
 
  def ensure_correct_user
@@ -31,14 +36,13 @@ class ListsController < ApplicationController
 
 
   def show
-    @list= List.find_by(id: params[:id])
+    @list= List.find_by!(id: params[:id])
     @user=User.find_by(id: @list.user_id)
     @likes_count=Like.where(list_id: @list.id).count
   end
 
 def new
   @list=List.new
-  @user=User.new
 end
 
 def create

@@ -3,6 +3,25 @@
 
   <body class="list-new">
     <div class="lists-new-top">
+       <%= form_for @list, :url => {:action => 'create' } do |f| %>
+
+         <div class="list-content-boxl"><%= f.label :温泉名 %><%= f.text_field :name %></div>
+
+         <div class="list-comment-box"><%= f.label :コメント %><%= f.text_field :comment, :class => "myform"  %></div>
+
+          <div class="link-url"><%= f.label :HP  %><%= f.text_field :url %></div>
+          <% logger.debug(@list.inspect) %>
+          <div class="link-url"><%= f.label :レビュー %><%= f.text_field :review %></div>
+          <div class="submit-btn"><%= f.submit :投稿 %></div>
+         <% end %>
+
+      </diiv>
+          </body>
+
+
+
+
+    <!-- <div class="lists-new-top">
 
         <%= form_tag("/lists/create")do %>
               <div class="list-new-box">
@@ -35,7 +54,6 @@
                   <input type=submit value="投稿">
                 </div>
                 </div><!-- #list-new-form-inboxの閉じタグ -->
-              </div>　　<!-- #list-new-boxの閉じタグ -->
-         <% end %> <!--  form_tagのend-->
-  </div>
-    </body>
+              <!-- </div>　　<!-- #list-new-boxの閉じタグ -->
+         <!-- <% end %> <!--  form_tagのend-->
+  <!-- </div> -->

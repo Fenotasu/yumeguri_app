@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :onsens
   get "users/:id/likes"=>"users#likes"
 
   post "likes/:list_id/create"=>"likes#create"

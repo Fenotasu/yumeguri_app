@@ -95,6 +95,7 @@ else
   @password=params[:password]
   @user=User.new
   render("users/login_form")
+  
 end
 
 end

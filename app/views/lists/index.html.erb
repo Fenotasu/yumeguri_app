@@ -23,7 +23,9 @@
                       <%else%>
                       <%= link_to list.name, list.url,  :target=>["_blank"] %>
                       <%end%>
+                      <%if list.review then %>
                     <%= link_to"レビュー", list.review,  :target=>["_blank"] %>
+                     <%end%>
                   </div>
                   <div class="list-comment">
                   <a>  <%= link_to list.comment,"/lists/#{list.id}" %></a>

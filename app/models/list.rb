@@ -1,4 +1,5 @@
 class List < ApplicationRecord
+  belongs_to :user
 
 
   validates :comment,{presence: true}
@@ -10,4 +11,5 @@ class List < ApplicationRecord
 def user
   return User.find_by(id: self.user_id)
 end
+
 end
