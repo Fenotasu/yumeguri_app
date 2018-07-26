@@ -36,13 +36,15 @@ class ListsController < ApplicationController
 
 
   def show
-    @list= List.find_by!(id: params[:id])
+    @list= List.find_by(id: params[:id])
     @user=User.find_by(id: @list.user_id)
     @likes_count=Like.where(list_id: @list.id).count
   end
 
 def new
-  @list=List.new
+
+  @list=List.new(name: params[:name])
+  @list.save
 end
 
 def create
