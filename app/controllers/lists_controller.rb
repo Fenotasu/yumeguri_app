@@ -14,11 +14,11 @@ class ListsController < ApplicationController
   #   end
   # end
 
-  logger.debug("[debug] lists#create")
-  logger.info("[info] lists#create")
-  logger.warn("[warn] lists#create")
-  logger.error("[error] lists#create")
-  logger.fatal("[fatal] lists#create")
+  # logger.debug("[debug] lists#create")
+  # logger.info("[info] lists#create")
+  # logger.warn("[warn] lists#create")
+  # logger.error("[error] lists#create")
+  # logger.fatal("[fatal] lists#create")
 
 
  def ensure_correct_user
@@ -42,23 +42,29 @@ class ListsController < ApplicationController
   end
 
 def new
+  @list=List.new(name: params[:name], onsen_id: params[:id], user_id: @current_user.id)
+end
 
-  @list=List.new(name: params[:name])
-  @list.save
+def user_params
+  params.require(:list).permit(:name, :comment, :hp, :review, :onsen_id, :user_id)
+  #parameterの中にあるrequireのlistからpermitで指定する項目を取得する
 end
 
 def create
-  @list=List.new(
-    name: params[:name],
-    comment: params[:comment],
-    url: params[:url],
-    review: params[:review],
-    user_id: @current_user.id)
+  # @list=List.new(
+    # name: params[:name],
+    # comment: params[:comment],
+    # onsen_id:  params[:onsen_id],
+    # url: params[:url],
+    # review: params[:review],
+    # user_id: @current_user.id)
+    @list = List.new(user_params)
 
   if @list.save
   redirect_to("/lists/index")
   else
    redirect_to("/lists/new")
+   logger.error(@list.errors.messages)
   end
 end
 

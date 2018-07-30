@@ -173,7 +173,7 @@ a:hover{
   width: 80px;
   float: left;
   cursor: pointer;
-  color: gray;
+  // color: gray;
   display: inline-block;
 }}
 .user_tabs a:hover{
@@ -210,7 +210,10 @@ color: blue;}
   font-size: 2em;
 }
 // ここからユーザーのいいね一覧ページ
-
+// .1tab a{
+//   color:#303030;
+//   text-decoration: none;
+// }
 .list-edit-link a{
   color:#303030;
   opacity: 0.8;

@@ -84,18 +84,19 @@ end
 
 def login
   @user=User.find_by(email: params[:user][:email])
+  # 配列の受け取り　userのemailを受け取る
 if @user && @user.authenticate(params[:user][:password])
+  # 入力したemailを持つユーザーが存在　かつ　入力したPWで認証に成功した場合
+  # authenticateメソッド
   session[:user_id]=@user.id
   flash[:notice] = "ログインしました"
   redirect_to("/lists/index")
 else
   @error_message="メールアドレスまたはパスワードが間違っています。"
-
   @email= params[:email]
   @password=params[:password]
   @user=User.new
   render("users/login_form")
-  
 end
 
 end
@@ -112,6 +113,13 @@ def likes
   @likes=Like.where(user_id: @user.id)
   @list= List.find_by(id: params[:id])
   @onsen_count=List.where(user_id: @user.id).count
+end
+
+def makes
+  @user=User.find_by(id: params[:id])
+  @onsen=Onsen.where(user_id: @user.id)
+  @list= List.find_by(id: params[:id])
+  @onsen_register_count=Onsen.where(user_id: @user.id).count
 end
 
 

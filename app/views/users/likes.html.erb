@@ -32,11 +32,13 @@
                          <%if @user.id==@current_user.id%>
                          <a>  <%= link_to" 編集", "/users/#{@user.id}/edit"%></a>
                          <a>  <%= link_to("削除","/users/#{@user.id}/destroy",{method:"post"})%></a>
+
                          <%end%>
                  </div>
                  <div class="user-tabs">
-                         <a><%= link_to("温泉", "/users/#{@user.id}") %></a>
-                         <a><%= link_to("いいね!", "/users/#{@user.id}/likes") %></a>
+                         <a><%= link_to("温泉", "/users/#{@user.id}")  %></a>
+                         <a class="2tab"><%= link_to("いいね!", "/users/#{@user.id}/likes") %></a>
+                         <a class="3tab"><%= link_to("登録", "/users/#{@user.id}/makes") %></a>
                  </div>
 
 
