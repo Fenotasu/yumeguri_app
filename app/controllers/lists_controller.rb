@@ -42,30 +42,24 @@ class ListsController < ApplicationController
   end
 
 def new
-  @list=List.new(name: params[:name], onsen_id: params[:id], user_id: @current_user.id)
+  @list=List.new(onsen_id: params[:id], user_id: @current_user.id)
+  @onsen=Onsen.find_by(id: params[:id])
 end
 
 def user_params
-  params.require(:list).permit(:name, :comment, :hp, :review, :onsen_id, :user_id)
+  params.require(:list).permit(:comment, :onsen_id, :user_id)
   #parameterの中にあるrequireのlistからpermitで指定する項目を取得する
 end
 
 def create
-  # @list=List.new(
-    # name: params[:name],
-    # comment: params[:comment],
-    # onsen_id:  params[:onsen_id],
-    # url: params[:url],
-    # review: params[:review],
-    # user_id: @current_user.id)
-    @list = List.new(user_params)
 
-  if @list.save
-  redirect_to("/lists/index")
-  else
-   redirect_to("/lists/new")
-   logger.error(@list.errors.messages)
-  end
+    @list = List.new(user_params)
+    if @list.save
+    redirect_to("/lists/index")
+    else
+     redirect_to("/lists/new")
+     logger.error(@list.errors.messages)
+    end
 end
 
 

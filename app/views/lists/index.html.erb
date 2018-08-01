@@ -15,15 +15,15 @@
                   <div class="list-index-item-upper">
                     <%user=User.find_by(id:list.user_id)%>
                     <%= link_to user.name, "/users/#{user.id}" %>
-                    <%if list.url.nil? then%>
-                      <%= list.name   %>
+                    <%if list.onsen.url.nil? then%>
+                      <%= list.onsen.name   %>
                       <%else%>
-                      <%= link_to list.name, list.url,  :target=>["_blank"] %>
+                      <%= link_to list.onsen.name, list.onsen.url,  :target=>["_blank"] %>
                       <%end%>
-                      <%if list.review.empty? then%>
+                      <%if list.onsen.review.nil? then%>
                         <%=   %>
                         <%else%>
-                        <%= link_to "レビュー", list.review, :target=>["_blank"] %>
+                        <%= link_to "レビュー", list.onsen.review, :target=>["_blank"] %>
                         <%end%>
                   </div>
                   <div class="list-comment">

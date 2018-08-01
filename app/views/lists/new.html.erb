@@ -6,11 +6,11 @@
        <%= form_for @list, :url => {:action => 'create' } do |f| %>
        <%= f.hidden_field :onsen_id %>
        <%= f.hidden_field :user_id %>
-         <div class="list-content-box"><%= f.label :温泉名 %><%= f.text_field :name %></div>
+         <div class="list-content-box"><%= f.label  @onsen.name %></div>
          <div class="list-comment-box"><%= f.label :コメント %><%= f.text_area :comment, :class => "myform"  %></div>
-          <div class="link-url"><%= f.label :HP  %><%= f.text_field :url %></div>
+
           <% logger.debug(@list.inspect) %>
-          <div class="link-url"><%= f.label :レビュー %><%= f.text_field :review %></div>
+
           <div class="submit-btn"><%= f.submit :投稿 %></div>
          <% end %>
       </diiv>
