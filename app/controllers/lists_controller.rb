@@ -1,7 +1,7 @@
 class ListsController < ApplicationController
 
 
-  before_action :authenticate_user, {only: [ :show, :edit, :update]}
+  before_action :authenticate_user, {only: [ :show, :edit, :update, :new, :create]}
 
   before_action :ensure_correct_user,{only: [:edit, :update, :destroy] }
 
