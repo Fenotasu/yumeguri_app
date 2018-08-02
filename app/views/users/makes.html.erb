@@ -1,0 +1,60 @@
+<!--  ユーザー詳細ページ--作成した温泉数を表示-->
+<div class="user-show-top">
+      <div class="user_image-yucount-rank">
+            <div class="profile-image">
+                <img src="<%="/user_images/#{@user.users_image}"%>">
+            </div>
+            <div class="yu-count">
+              ＜登録：<%=@onsen_register_count%>温泉＞
+            </div>
+            <!-- 行った温泉の数に合わせて表示変更 -->
+            <div class="yu-level">
+                  <%if  @onsen_register_count >10%>
+                      ほんといつも助かってます！
+                  <% elsif  @onsen_register_count >8 %>
+                      温泉発掘家ですね
+                  <% elsif  @onsen_register_count >6 %>
+                      あなたは開拓者です！
+                  <% elsif  @onsen_register_count >=1 %>
+                      新規温泉登録ありがとうございます
+                  <% else %>
+                      自分の行った温泉を登録してみよう
+                  <%end%>
+            </div>
+      </div>  <!-- user_image-yucount-rankの閉じタグ -->
+
+      <div class="show-container">
+                    <h2>    <%= @user.name %>  </h2>
+                 <div class = "user-show-name">
+                     <p>    <%= @user.email %>  </p>
+                 </div>
+                 <div class="user-edit-destroy">
+                         <%if @user.id==@current_user.id%>
+                         <a>  <%= link_to" 編集", "/users/#{@user.id}/edit"%></a>
+                         <a>  <%= link_to("削除","/users/#{@user.id}/destroy",{method:"post"})%></a>
+                         <%end%>
+                 </div>
+                 <div class="user-tabs">
+                         <a><%= link_to("温泉", "/users/#{@user.id}") %></a>
+                         <a><%= link_to("いいね!", "/users/#{@user.id}/likes") %></a>
+                 </div>
+
+
+              <div class="like-lists">
+                  <% @onsen.each do |onsen| %>
+                        <div class="like-item">
+                            <div class="like-item-right">
+                                      <a>
+                                          <%=onsen.prefecture%>
+                                      </a>
+                                  <div class="list-user_comment">
+                                      <a>
+                                         <%=link_to(onsen.name,"/onsens/#{onsen.id}")%>
+                                      </a>
+                                  </div>
+                            </div><!-- like-item-right の閉じタグ-->
+                        </div><!-- like-itemの閉じタグ -->
+                  <%end%>
+              </div><!-- like-listsの閉じタグ -->
+      </div><!-- "show-container" の閉じタグ-->
+</div><!-- user-show-topの閉じタグ -->

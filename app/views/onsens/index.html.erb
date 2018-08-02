@@ -1,0 +1,40 @@
+<div class='onsen-index-body'>
+<p id="notice"><%= notice %></p>
+
+<h1>温泉一覧</h1>
+
+<table div class='onsen-table'>
+  <thead>
+    <tr>
+      <th>温泉名</th>
+      <th>県</th>
+      <th></th>
+      <th>レビュー</th>
+      <th>投稿者</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @onsens.each do |onsen| %>
+      <tr>
+        <td><%= onsen.name %></td>
+        <td><%= onsen.prefecture %></td>
+        <td><%= link_to 'HP', onsen.url %></td>
+        <td><%= link_to 'レビュー', onsen.review %></td>
+
+
+        <td><%= onsen.user.name%></td>
+        <td><%= link_to '詳細', onsen %></td>
+        <!-- <td><%= link_to '編集', edit_onsen_path(onsen) %></td>
+        <td><%= link_to '削除', onsen, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+      </tr>
+    <% end %>
+  </tbody>
+</table >
+
+<br>
+
+<%= link_to 'New Onsen', new_onsen_path %>
+
+</div>

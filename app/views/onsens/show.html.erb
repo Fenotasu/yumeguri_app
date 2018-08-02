@@ -1,0 +1,32 @@
+
+<div class='onsen-show'>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>温泉名:</strong>
+  <%= @onsen.name %>
+</p>
+
+<p>
+  <strong>県:</strong>
+  <%= @onsen.prefecture %>
+</p>
+
+<p>
+  <strong>HP:</strong>
+  <%= @onsen.url %>
+</p>
+
+<p>
+  <strong>レビュー:</strong>
+  <%= @onsen.review %>
+</p>
+
+<p>
+  <strong>投稿:</strong>z
+</p>
+
+<!-- <%= link_to '編集', edit_onsen_path(@onsen) %> | -->
+<%= link_to '投稿', :controller=>'lists', :action =>'new', id: @onsen.id  %>
+<%= link_to '戻る', onsens_path %>
+</div>

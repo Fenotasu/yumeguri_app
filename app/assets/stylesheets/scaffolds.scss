@@ -1,0 +1,131 @@
+.onsen-index-body{
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+  font-family: Georgia,游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN",HGS明朝E,メイリオ,Meiryo,serif;
+  font-size: 20px;
+  line-height: 18px;
+  text-align: center;
+  width: calc(100vw - (33px * 2));
+}
+.onsen-table{
+  margin: 50px auto;
+  font-size: 1.5rem;
+}
+
+.onsen-form{
+  width: 50%;
+  text-align: right;
+  margin: 150px auto;
+  font-size: 1.5rem;
+}
+@media screen and (min-width:480px) and ( max-width:600px) {
+    /*　画面サイズが480pxからはここを読み込む　*/
+  .onsen-form{  width: 50%;
+    margin: 150px auto;}
+}
+
+@media screen and (min-width:600px) and ( max-width:960px) {
+    /*　画面サイズが600pxから960pxまではここを読み込む　*/
+
+}
+
+@media screen and (min-width:960px) and ( max-width:1280px) {
+    /*　画面サイズが960pxから1280pxまではここを読み込む　*/
+
+}
+
+@media screen and (min-width:1280px) {
+    /*　画面サイズが1280pxからはここを読み込む　*/
+    .onsen-form{  width: 30%;
+      margin: 150px auto;}
+}
+
+
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 1.3rem;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+
+  &:visited1 {
+    color: #666;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+th {
+padding: 20px 0;
+}
+
+td {
+  padding: 0 5px 7px;
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+//
+// .field_with_errors {
+//   padding: 2px;
+//   background-color: red;
+//   display: table;
+// }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px -7px 0;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+label1 {
+  display: block;
+}
+.onsen-show{
+  height: 500px;
+  margin-top: 100px;
+  margin-left: 100px;
+  font-family: Georgia,游明朝,"Yu Mincho",YuMincho,"Hiragino Mincho ProN",HGS明朝E,メイリオ,Meiryo,serif;
+  font-size: 2rem;
+  p{
+    font-size: 2rem;
+  }
+}
