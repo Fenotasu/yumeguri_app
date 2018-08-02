@@ -3,6 +3,15 @@
 
 <h1>温泉一覧</h1>
 
+<div>
+<%= form_tag(onsens_path, method: "get") do %>
+<%= label_tag :name, "温泉名" %><%= text_field_tag :name, params[:name] %>
+<%= label_tag :prefecture, "都道府県" %>
+
+<%= submit_tag "検索" %>
+
+<% end %>
+</div>
 <table div class='onsen-table'>
   <thead>
     <tr>
@@ -19,11 +28,9 @@
     <% @onsens.each do |onsen| %>
       <tr>
         <td><%= onsen.name %></td>
-        <td><%= onsen.prefecture %></td>
+        <td><%= onsen.prefecture_id%></td>
         <td><%= link_to 'HP', onsen.url %></td>
         <td><%= link_to 'レビュー', onsen.review %></td>
-
-
         <td><%= onsen.user.name%></td>
         <td><%= link_to '詳細', onsen %></td>
         <!-- <td><%= link_to '編集', edit_onsen_path(onsen) %></td>

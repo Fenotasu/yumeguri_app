@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_01_001009) do
+ActiveRecord::Schema.define(version: 2018_08_02_065458) do
 
   create_table "likes", force: :cascade do |t|
     t.integer "user_id"
@@ -29,13 +29,19 @@ ActiveRecord::Schema.define(version: 2018_08_01_001009) do
 
   create_table "onsens", force: :cascade do |t|
     t.string "name"
-    t.string "prefecture"
     t.string "url"
     t.string "review"
     t.integer "list_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.integer "prefecture_id"
+  end
+
+  create_table "places", force: :cascade do |t|
+    t.integer "prefecture_code"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "posts", force: :cascade do |t|
@@ -43,6 +49,13 @@ ActiveRecord::Schema.define(version: 2018_08_01_001009) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
+  end
+
+  create_table "prefectures", force: :cascade do |t|
+    t.string "name"
+    t.string "area"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

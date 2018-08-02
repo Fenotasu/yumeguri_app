@@ -9,24 +9,26 @@
 
 <p>
   <strong>県:</strong>
-  <%= @onsen.prefecture %>
+  <%= @onsen.prefecture_id %>
 </p>
 
 <p>
   <strong>HP:</strong>
-  <%= @onsen.url %>
+  <%= link_to 'HPを表示', @onsen.url, :target=>["_blank"]%>
 </p>
 
 <p>
   <strong>レビュー:</strong>
-  <%= @onsen.review %>
+  <%= link_to '口コミを表示', @onsen.review, :target=>["_blank"] %>
 </p>
 
 <p>
-  <strong>投稿:</strong>z
+  <strong>投稿:</strong><%=@onsen.user.name%>
 </p>
 
-<!-- <%= link_to '編集', edit_onsen_path(@onsen) %> | -->
+<%= link_to '編集', edit_onsen_path(@onsen) %>
+<%= link_to"削除","/onsens/#{@onsen.id}",{method:"delete"}%>
+
 <%= link_to '投稿', :controller=>'lists', :action =>'new', id: @onsen.id  %>
 <%= link_to '戻る', onsens_path %>
 </div>

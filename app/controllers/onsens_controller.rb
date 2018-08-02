@@ -5,6 +5,14 @@ class OnsensController < ApplicationController
   # GET /onsens.json
   def index
     @onsens = Onsen.all
+
+    if params[:name].present?
+    @onsens = @onsens.get_by_name params[:name]
+    end
+    if params[:prefecture_id].present?
+    @onsens = @onsens.get_by_prefecture_id params[:prefecture_id]
+    end
+    logger.debug("[debug] onsens#index")
   end
 
   # GET /onsens/1
@@ -70,6 +78,6 @@ class OnsensController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def onsen_params
-      params.require(:onsen).permit(:name, :prefecture, :url, :review, :list_id, :user_id)
+      params.require(:onsen).permit(:name, :prefecture_id, :url, :review, :list_id, :user_id)
     end
 end
