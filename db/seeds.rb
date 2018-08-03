@@ -13,20 +13,6 @@ User.create(:name=>"Miu", :email=>"miyuyu@gmail.com", :password=>"miyu", :id=>3,
 User.create(:name=>"Acchi", :email=>"acchi@gmail.com", :password=>"bb", :id=>4, :users_image=>"4.jpg")
 User.create(:name=>"admin", :email=>"admin", :password=>"admin", :id=>5, :users_image=>"5.jpg")
 
-List.create(:id=>1,  :comment=>"夏のお祭りの日は無料で入れた！", :user_id=>1,  :onsen_id=>17)
-List.create(:id=>2,  :comment=>"７つの湯で一番豪華、滝が露天風呂に注ぐ趣向はここだけ！ ", :user_id=>1,  :onsen_id=>18)
-List.create(:id=>3,  :comment=>"横は海！和歌山の温泉といったらここ", :user_id=>1,  :onsen_id=>19)
-List.create(:id=>4,  :comment=>"釜風呂から眺めた白馬の空", :user_id=>1,  :onsen_id=>20)
-List.create(:id=>5,  :comment=>"桜島を見ながら湯船につかる贅沢", :user_id=>1,  :onsen_id=>21)
-List.create(:id=>12, :comment=>"山の中にある地元民の湯", :user_id=>1,  :onsen_id=>22)
-List.create(:id=>6,  :comment=>"竹林の中で入るお湯＆イチゴ狩り付き", :user_id=>1,  :onsen_id=>23)
-List.create(:id=>7,  :comment=>"炭酸風呂が刺激的　", :user_id=>1,  :onsen_id=>24)
-List.create(:id=>8,  :comment=>"山の湧き水をひいた水風呂が最高", :user_id=>1,  :onsen_id=>25)
-List.create(:id=>9, :comment=>"かずら橋を見た帰りに、露天風呂最高", :user_id=>1,  :onsen_id=>26)
-List.create(:id=>10,  :comment=>"海を一望出来る露天風呂に個室風呂など温泉好きには堪らないバラエティ", :user_id=>1,  :onsen_id=>27)
-List.create(:id=>11, :comment=>"赤穂でテニス終わったらここ！高級旅館で日帰り温泉", :user_id=>1,  :onsen_id=>28)
-
-
 
 Onsen.create(:name=>'礼文島温泉', :prefecture_id=>0, :user_id=>1)
 Onsen.create(:name=>'利尻ふれあい温泉', :prefecture_id=>0, :user_id=>1)
@@ -57,3 +43,17 @@ Onsen.create(:name=>"太閤の湯", :prefecture_id=>27, :url=>"http://www.taikou
 Onsen.create(:name=>"祖谷渓温泉ホテル秘境の湯", :prefecture_id=>35, :url=>"http://www.hotel-hikyounoyu.co.jp/onsen/", :review=>"https://www.google.co.jp/maps/place/%E7%A5%96%E8%B0%B7%E6%B8%93%E6%B8%A9%E6%B3%89%E3%83%9B%E3%83%86%E3%83%AB%E7%A7%98%E5%A2%83%E3%81%AE%E6%B9%AF/@33.8898235,133.8107092,17z/data=!3m1!4b1!4m12!1m2!2m1!1z5rip5rOJ!3m8!1s0x3552273704a07c6d:0x191aa3228c943fb9!5m1!1s2018-07-10!8m2!3d33.8898191!4d133.8128979!9m1!1b1", :user_id=>1)
 Onsen.create(:name=>"漁火の宿", :prefecture_id=>29, :url=>"http://www.kancho.co.jp/bath/", :review=>"https://www.google.co.jp/maps/place/%E7%B4%80%E5%B7%9E%E6%B8%A9%E6%B3%89+%E3%81%82%E3%82%8A%E3%81%8C%E3%81%A8%E3%81%86%E3%81%AE%E6%B9%AF+%E6%BC%81%E7%81%AB%E3%81%AE%E5%AE%BF+%E3%82%B7%E3%83%BC%E3%82%B5%E3%82%A4%E3%83%89%E8%A6%B3%E6%BD%AE/@34.187481,135.1476583,17z/data=!3m1!4b1!4m10!1m2!2m1!1z5ZKM5q2M5bGxIOa8geeBq-OBruWuvw!3m6!1s0x60074d5f5c4fb491:0x1cfd673dd3962dbb!8m2!3d34.1874766!4d135.149847!9m1!1b1", :user_id=>1)
 Onsen.create(:name=>"銀波荘", :prefecture_id=>27, :url=>"https://japanese-inn-with-hot-spring-196.business.site/　", :review=>"https://www.google.co.jp/maps/place/%E7%B5%B6%E6%99%AF%E9%9C%B2%E5%A4%A9%E9%A2%A8%E5%91%82%E3%81%AE%E5%AE%BF+%E9%8A%80%E6%B3%A2%E8%8D%98/@34.726906,134.4053803,17z/data=!3m1!4b1!4m9!3m8!1s0x0:0xf2929d172bbf6f97!5m1!1s2018-07-10!8m2!3d34.726906!4d134.407569!9m1!1b1", :user_id=>1)
+
+
+List.create(:id=>1,  :comment=>"夏のお祭りの日は無料で入れた！", :user_id=>1,  :onsen_id=>17)
+List.create(:id=>2,  :comment=>"７つの湯で一番豪華、滝が露天風呂に注ぐ趣向はここだけ！ ", :user_id=>1,  :onsen_id=>18)
+List.create(:id=>3,  :comment=>"横は海！和歌山の温泉といったらここ", :user_id=>1,  :onsen_id=>19)
+List.create(:id=>4,  :comment=>"釜風呂から眺めた白馬の空", :user_id=>1,  :onsen_id=>20)
+List.create(:id=>5,  :comment=>"桜島を見ながら湯船につかる贅沢", :user_id=>1,  :onsen_id=>21)
+List.create(:id=>12, :comment=>"山の中にある地元民の湯", :user_id=>1,  :onsen_id=>22)
+List.create(:id=>6,  :comment=>"竹林の中で入るお湯＆イチゴ狩り付き", :user_id=>1,  :onsen_id=>23)
+List.create(:id=>7,  :comment=>"炭酸風呂が刺激的　", :user_id=>1,  :onsen_id=>24)
+List.create(:id=>8,  :comment=>"山の湧き水をひいた水風呂が最高", :user_id=>1,  :onsen_id=>25)
+List.create(:id=>9, :comment=>"かずら橋を見た帰りに、露天風呂最高", :user_id=>1,  :onsen_id=>26)
+List.create(:id=>10,  :comment=>"海を一望出来る露天風呂に個室風呂など温泉好きには堪らないバラエティ", :user_id=>1,  :onsen_id=>26)
+List.create(:id=>11, :comment=>"赤穂でテニス終わったらここ！高級旅館で日帰り温泉", :user_id=>1,  :onsen_id=>27)
