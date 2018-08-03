@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  prefecture_code: MyString
+  : 1
+
+two:
+  prefecture_code: MyString
+  : 1
