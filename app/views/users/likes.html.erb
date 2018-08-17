@@ -36,9 +36,9 @@
                          <%end%>
                  </div>
                  <div class="user-tabs">
-                         <a><%= link_to("温泉", "/users/#{@user.id}")  %></a>
-                         <a class="2tab"><%= link_to("いいね!", "/users/#{@user.id}/likes") %></a>
-                         <a class="3tab"><%= link_to("登録", "/users/#{@user.id}/makes") %></a>
+                   <li><a><%= link_to("温泉", "/users/#{@user.id}") %></a></li>
+                   <li class="current">  <a><%= link_to("いいね!", "/users/#{@user.id}/likes") %></a></li>
+                   <li>  <a><%= link_to("登録", "/users/#{@user.id}/makes") %></a></li>
                  </div>
 
 

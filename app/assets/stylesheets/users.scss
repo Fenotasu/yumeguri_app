@@ -174,10 +174,14 @@ a:hover{
   float: left;
   cursor: pointer;
   // color: gray;
-  display: inline-block;
+
 }}
 .user_tabs a:hover{
-color: blue;}
+color: blue
+}
+.current a {
+color: blue;
+}
 
 
 .onsen-item{

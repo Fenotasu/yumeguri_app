@@ -4,16 +4,31 @@ class OnsensController < ApplicationController
   # GET /onsens
   # GET /onsens.json
   def index
-    @onsens = Onsen.all
-
+   @onsens = Onsen.all
     if params[:name].present?
     @onsens = @onsens.get_by_name params[:name]
+    elsif params[:onsen].present? && params[:onsen][:prefecture_id].present?  then
+    logger.debug(params[:onsen])
+    @onsens = @onsens.get_by_prefecture_id params[:onsen][:prefecture_id]
+   # logger.debug(params[:onsen][:prefecture_id])
+    else
+    @onsens = Onsen.all
     end
-    if params[:prefecture_id].present?
-    @onsens = @onsens.get_by_prefecture_id params[:prefecture_id]
-    end
-    logger.debug("[debug] onsens#index")
   end
+
+    # if params[:onsen].nil?
+    #   @onsens = Onsen.all
+    # else
+
+  #   if params[:onsen][:prefecture_id].present?
+  #   @onsens = @onsens.get_by_prefecture_id params[:onsen][:prefecture_id]
+  # else
+  #       logger.debug(params[:onsen][:prefecture_id])
+  #   end
+  #
+  #   logger.debug("[debug] @onsens")
+  #   end
+  #  # end
 
   # GET /onsens/1
   # GET /onsens/1.json

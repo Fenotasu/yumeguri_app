@@ -38,24 +38,11 @@ ActiveRecord::Schema.define(version: 2018_08_02_065458) do
     t.integer "prefecture_id"
   end
 
-  create_table "places", force: :cascade do |t|
-    t.integer "prefecture_code"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "posts", force: :cascade do |t|
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
-  end
-
-  create_table "prefectures", force: :cascade do |t|
-    t.string "name"
-    t.string "area"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

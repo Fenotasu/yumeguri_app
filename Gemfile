@@ -74,3 +74,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rails-i18n'
 gem 'bcrypt'
+gem 'mysql2', '~> 0.5.2'

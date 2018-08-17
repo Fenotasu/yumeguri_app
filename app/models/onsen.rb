@@ -60,5 +60,6 @@ scope :get_by_name, ->(name) {
 where("name like ?", "%#{name}%")
 }
 #都道府県による絞り込み
-scope :get_by_prefecture, ->(prefecture) {where(prefecture: prefecture)}
+scope :get_by_prefecture_id, ->(prefecture_id) {where(prefecture_id: prefecture_id)}
 end
+#(prefecture_id) 受け取った値に命名したもの
