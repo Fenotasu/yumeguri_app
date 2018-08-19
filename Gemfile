@@ -51,14 +51,7 @@ group :development do
 end
 
 group :production do
-  development:
-     adapter: mysql2
-     encording: utf8
-     database: Yumeguri_app_DB
-     pool: 5
-     username: aymarket888
-     password: Boarding888
-     host: yumeguri-note-mysqldb.ccybqlzcgtjj.us-east-2.rds.amazonaws.com
+     gem 'mysql2', '~> 0.5.2'
 end
 
 group :test do
@@ -81,4 +74,3 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rails-i18n'
 gem 'bcrypt'
-gem 'mysql2', '~> 0.5.2'
