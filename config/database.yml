@@ -21,12 +21,12 @@ test:
   database: db/test.sqlite3
 
 production:
-    adapter: mysql2
-    encording: utf8
-    database: yumeguri_app
-    pool: 5
-    username: aymarket888
-    password: Boarding888
-    host: yumeguri-note-mysqldb.ccybqlzcgtjj.us-east-2.rds.amazonaws.com
-    port: 3306
-    timeout: 5000
+  adapter: mysql2
+  encording: utf8
+  database: yumeguri_app
+  pool: 5
+  username: aymarket888
+  password: Boarding888
+  host: yumeguri-note-mysqldb.ccybqlzcgtjj.us-east-2.rds.amazonaws.com
+  port: 3306
+  timeout: 5000
