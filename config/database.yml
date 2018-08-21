@@ -29,3 +29,4 @@ production:
     password: Boarding888
     host: yumeguri-note-mysqldb.ccybqlzcgtjj.us-east-2.rds.amazonaws.com
     port: 3306
+    timeout: 5000
