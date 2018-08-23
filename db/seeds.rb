@@ -4,9 +4,8 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
-
+#   Character.create(name: 'Luke', movie: movies.first
+#test
 User.create(:name=>"央", :email=>"aaa@gmail.com", :password=>"aaa", :id=>1, :users_image=>"1.jpg")
 User.create(:name=>"yuyusuke", :email=>"yuyu@gmail.com", :password=>"yusuke", :id=>2, :users_image=>"2.jpg")
 User.create(:name=>"Miu", :email=>"miyuyu@gmail.com", :password=>"miyu", :id=>3, :users_image=>"3.jpg")

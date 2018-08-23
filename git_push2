@@ -1,0 +1,6 @@
+#!/bin/sh
+
+git add -A
+read a
+git commit -m "${a}"
+git push
